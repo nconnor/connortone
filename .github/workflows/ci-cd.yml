@@ -57,7 +57,7 @@ jobs:
               only_4xx: true,
               check_html: true,
               check_favicon: true
-            ).call
+            ).run
           '
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
