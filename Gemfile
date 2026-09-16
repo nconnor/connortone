@@ -4,4 +4,4 @@ source "https://rubygems.org"
 gem "github-pages", group: :jekyll_plugins
 
 # HTML validation + broken link checking in CI (not needed at runtime).
-gem "html-proofer", group: :test
+gem "html-proofer"
