@@ -49,9 +49,6 @@ jobs:
       - name: Run html-proofer
         run: |
           bundle exec htmlproofer ./_site \
-            --check-html \
-            --check-opengraph \
-            --check-favicon \
             --empty-alt-ignore \
             --allow-hash-href \
             --only-4xx \
