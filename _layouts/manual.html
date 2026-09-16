@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<article class="manual" aria-label="{{ page.title }}">
+  <header class="manual-header">
+    <div class="container">
+      <p class="manual-eyebrow">Product Manual</p>
+      <h1 class="manual-title">{{ page.product_name | default: page.title }}</h1>
+      {% if page.revision %}
+      <p class="manual-revision">Revision {{ page.revision }}</p>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="manual-content">
+    <div class="container">
+      {{ content }}
+    </div>
+  </div>
+
+  <footer class="manual-footer">
+    <div class="container">
+      <p>CONNORTONE Inc. &middot; Marlborough, Mass. USA</p>
+      <p>
+        <a href="{{ '/chowdinator/' | relative_url }}">Back to product</a>
+        &middot;
+        <a href="{{ '/warranty/' | relative_url }}">Warranty of craftsmanship</a>
+      </p>
+    </div>
+  </footer>
+</article>

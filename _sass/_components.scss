@@ -1,0 +1,410 @@
+// ============================================================
+//  Connortone — Components (hero, product card, feature list, timeline)
+// ============================================================
+
+@import "variables";
+
+// ---- Section title (shared) ----------------------------------------
+.section-title {
+  font-family: $font-headings;
+  color: $color-primary;
+  border-bottom: 2px solid $color-accent;
+  display: inline-block;
+  padding-bottom: 0.25em;
+  margin-bottom: 1.5rem;
+}
+
+// ---- Buttons --------------------------------------------------------
+.btn {
+  display: inline-block;
+  padding: 0.65em 1.4em;
+  font-family: $font-headings;
+  font-size: 1rem;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  border: 2px solid $color-primary;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.btn-primary {
+  background: $color-primary;
+  color: $color-on-primary;
+  border-color: $color-primary;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background: $color-accent;
+  color: $color-on-accent;
+  border-color: $color-accent;
+}
+
+.btn-outline {
+  background: transparent;
+  color: $color-primary;
+  border-color: $color-primary;
+}
+
+.btn-outline:hover,
+.btn-outline:focus {
+  background: $color-primary;
+  color: $color-on-primary;
+}
+
+// ---- Hero (home) ---------------------------------------------------
+.hero {
+  background: $color-bg-alt;
+  border-bottom: 3px solid $color-primary;
+  padding: 3rem 0;
+}
+
+.hero-inner {
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: 0 $gutter;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.hero-logo {
+  text-align: center;
+}
+
+.hero-logo-img {
+  max-height: 180px;
+  width: auto;
+  margin: 0 auto;
+}
+
+.hero-tagline {
+  text-align: center;
+}
+
+.hero-tagline-main {
+  font-family: $font-headings;
+  font-size: 1.6rem;
+  color: $color-primary;
+  line-height: 1.3;
+  margin-bottom: 0.5em;
+}
+
+.hero-tagline-sub {
+  font-size: 1rem;
+  color: $color-charcoal;
+  letter-spacing: 0.05em;
+}
+
+.hero-render {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.hero-render-img {
+  max-height: 420px;
+  width: auto;
+  margin: 0 auto;
+  border: 1px solid $color-rule;
+}
+
+@media (min-width: 860px) {
+  .hero-render {
+    grid-column: auto;
+  }
+  .hero-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero-render {
+    grid-column: 1 / -1;
+  }
+}
+
+// ---- Home intro ----------------------------------------------------
+.home-intro {
+  padding: 2.5rem 0;
+}
+
+.home-featured {
+  background: $color-bg-alt;
+  padding: 2.5rem 0;
+  border-top: 1px solid $color-rule;
+  border-bottom: 1px solid $color-rule;
+}
+
+// ---- Product card --------------------------------------------------
+.product-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  background: $color-bg;
+  border: 1px solid $color-rule;
+  padding: 1.5rem;
+}
+
+.product-card-media {
+  text-align: center;
+}
+
+.product-card-img {
+  max-height: 320px;
+  width: auto;
+  margin: 0 auto;
+}
+
+.product-card-code {
+  font-family: $font-headings;
+  color: $color-accent;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5em;
+}
+
+.product-card-desc {
+  margin-bottom: 1.25em;
+}
+
+@media (max-width: 720px) {
+  .product-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+// ---- Product page hero ---------------------------------------------
+.product-hero {
+  background: $color-bg-alt;
+  border-bottom: 3px solid $color-primary;
+  padding: 2.5rem 0;
+}
+
+.product-hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.product-hero-media {
+  text-align: center;
+}
+
+.product-hero-img {
+  max-height: 400px;
+  width: auto;
+  margin: 0 auto;
+}
+
+.product-code {
+  font-family: $font-headings;
+  color: $color-accent;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5em;
+}
+
+.product-title {
+  font-size: 2.6rem;
+  margin-bottom: 0.25em;
+}
+
+.product-subtitle {
+  font-family: $font-headings;
+  font-size: 1.25rem;
+  color: $color-charcoal;
+  font-style: italic;
+  margin-bottom: 1em;
+}
+
+.product-status {
+  display: inline-block;
+  font-family: $font-headings;
+  padding: 0.3em 0.8em;
+  border: 2px solid currentColor;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+}
+
+.product-status-available {
+  color: $color-accent-cool;
+}
+
+.product-status-coming-soon {
+  color: $color-accent;
+}
+
+.product-status-concept {
+  color: $color-charcoal;
+}
+
+@media (max-width: 720px) {
+  .product-hero-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+// ---- Product features ---------------------------------------------
+.product-features {
+  padding: 2.5rem 0;
+}
+
+.product-links {
+  padding: 2rem 0;
+  background: $color-bg-alt;
+}
+
+.product-link-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+// ---- Feature list (used in product body content) -------------------
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature-list li {
+  padding: 0.75em 0;
+  border-bottom: 1px solid $color-rule;
+  display: flex;
+  gap: 0.75em;
+  align-items: baseline;
+}
+
+.feature-list li::before {
+  content: "\25C6"; // diamond
+  color: $color-accent;
+  flex-shrink: 0;
+}
+
+// ---- Page (generic content) ---------------------------------------
+.page-header {
+  background: $color-bg-alt;
+  border-bottom: 2px solid $color-primary;
+  padding: 2rem 0;
+}
+
+.page-title {
+  margin: 0;
+}
+
+.page-content {
+  padding: 2.5rem 0;
+}
+
+// ---- Manual --------------------------------------------------------
+.manual-header {
+  background: $color-bg-alt;
+  border-bottom: 2px solid $color-primary;
+  padding: 2rem 0;
+}
+
+.manual-eyebrow {
+  font-family: $font-headings;
+  color: $color-accent;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  margin-bottom: 0.5em;
+}
+
+.manual-title {
+  margin-bottom: 0.25em;
+}
+
+.manual-revision {
+  font-family: $font-headings;
+  font-style: italic;
+  color: $color-charcoal;
+}
+
+.manual-content {
+  padding: 2.5rem 0;
+}
+
+.manual-content section {
+  margin-bottom: 2.5rem;
+}
+
+.manual-content h2 {
+  border-bottom: 1px solid $color-rule;
+  padding-bottom: 0.25em;
+  margin-bottom: 1rem;
+}
+
+.manual-footer {
+  background: $color-primary;
+  color: $color-text-inverse;
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.manual-footer a {
+  color: $color-accent-warm;
+}
+
+// ---- Timeline (about page) ----------------------------------------
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: $color-rule-strong;
+}
+
+.timeline-entry {
+  position: relative;
+  padding: 0 0 1.5rem 2.5rem;
+}
+
+.timeline-entry::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.4em;
+  width: 14px;
+  height: 14px;
+  background: $color-accent;
+  border: 2px solid $color-primary;
+  border-radius: 50%;
+}
+
+.timeline-year {
+  font-family: $font-headings;
+  font-weight: 700;
+  color: $color-primary;
+  display: block;
+  margin-bottom: 0.25em;
+}
+
+.timeline-text {
+  color: $color-text;
+}
+
+// ---- Stamp / seal accent (warranty) -------------------------------
+.stamp {
+  display: inline-block;
+  border: 3px double $color-stamp;
+  color: $color-stamp;
+  font-family: $font-headings;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.5em 1.2em;
+  transform: rotate(-6deg);
+  margin: 1rem 0;
+}

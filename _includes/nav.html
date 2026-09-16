@@ -1,0 +1,40 @@
+<nav class="site-nav" aria-label="Primary navigation">
+  <div class="nav-container">
+    <a href="{{ '/' | relative_url }}" class="nav-logo">
+      <img src="{{ '/assets/images/connortone-logo.png' | relative_url }}" alt="CONNORTONE" class="nav-logo-img">
+    </a>
+
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+
+    <ul class="nav-menu" id="nav-menu">
+      <li class="nav-item">
+        <a href="{{ '/' | relative_url }}" class="nav-link {% if page.url == '/' %}is-active{% endif %}">Home</a>
+      </li>
+      <li class="nav-item nav-item-products">
+        <a href="{{ '/chowdinator/' | relative_url }}" class="nav-link {% if page.url contains '/chowdinator/' or page.collection == 'products' %}is-active{% endif %}">Products</a>
+        <!-- For initial single-product launch, link directly to the Chowdinator.
+             When a second product ships, convert this to a dropdown and iterate
+             the site.products collection here. -->
+      </li>
+      <li class="nav-item">
+        <a href="{{ '/about/' | relative_url }}" class="nav-link {% if page.url contains '/about/' %}is-active{% endif %}">About</a>
+      </li>
+      <li class="nav-item">
+        <a href="{{ '/warranty/' | relative_url }}" class="nav-link {% if page.url contains '/warranty/' %}is-active{% endif %}">Warranty</a>
+      </li>
+      <li class="nav-item">
+        <a href="{{ '/chowdinator/manual/' | relative_url }}" class="nav-link {% if page.url contains '/chowdinator/manual/' %}is-active{% endif %}">Manual</a>
+      </li>
+      <li class="nav-item">
+        <a href="{{ '/downloads/' | relative_url }}" class="nav-link {% if page.url contains '/downloads/' %}is-active{% endif %}">Downloads</a>
+      </li>
+      <li class="nav-item">
+        <a href="{{ '/contact/' | relative_url }}" class="nav-link {% if page.url contains '/contact/' %}is-active{% endif %}">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,49 @@
+---
+layout: default
+---
+<article class="product" aria-label="{{ page.product_name }}">
+  <header class="product-hero">
+    <div class="container product-hero-inner">
+      <div class="product-hero-media">
+        <img src="{{ page.product_image | relative_url }}" alt="{{ page.product_name }}" class="product-hero-img">
+      </div>
+      <div class="product-hero-text">
+        <p class="product-code">{{ page.product_code }}</p>
+        <h1 class="product-title">{{ page.product_name }}</h1>
+        <p class="product-subtitle">{{ page.product_subtitle }}</p>
+
+        {% if page.product_status == 'coming_soon' %}
+          <p class="product-status product-status-coming-soon">Coming soon.</p>
+        {% elsif page.product_status == 'concept' %}
+          <p class="product-status product-status-concept">Concept.</p>
+        {% else %}
+          <p class="product-status product-status-available">Available now.</p>
+        {% endif %}
+      </div>
+    </div>
+  </header>
+
+  {% if page.product_status == 'available' or page.product_status == nil %}
+  <section class="product-features" aria-label="Product features">
+    <div class="container">
+      <h2 class="section-title">Features</h2>
+      {{ content }}
+    </div>
+  </section>
+
+  <section class="product-links" aria-label="Product resources">
+    <div class="container">
+      <ul class="product-link-list">
+        <li><a href="{{ '/chowdinator/manual/' | relative_url }}" class="btn btn-outline">Read the manual &rarr;</a></li>
+        <li><a href="{{ '/warranty/' | relative_url }}" class="btn btn-outline">Warranty of craftsmanship &rarr;</a></li>
+      </ul>
+    </div>
+  </section>
+  {% else %}
+  <section class="product-coming-soon" aria-label="Coming soon">
+    <div class="container">
+      {{ content }}
+    </div>
+  </section>
+  {% endif %}
+</article>

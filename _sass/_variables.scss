@@ -1,0 +1,57 @@
+// ============================================================
+//  Connortone Brand Palette
+//  Vintage mid-century American industrial — 1960s catalog
+//  Source: connortone-plan/03-dossiers/color-palette.md
+// ============================================================
+
+// ---- Raw palette ----------------------------------------------------
+$color-black:        #000000;
+$color-white:        #ffffff;
+$color-cream:        #f0f0e6;
+
+$color-teal:         #264653;  // Deep teal — primary, headers
+$color-coral:        #e76f51;  // Burnt coral — accents
+$color-ochre:        #f4a261;  // Sandy ochre — warm accent
+$color-teal-green:   #2a9d8f;  // Teal green — cool accent
+$color-maroon:       #800000;  // Stamp / seal color
+$color-brass:        #c5a059;  // Hardware accent
+$color-charcoal:      #2c2c2c;  // Engraved text / dark UI
+
+// ---- Semantic mappings ----------------------------------------------
+$color-text:           $color-black;
+$color-text-inverse:   $color-white;
+$color-bg:             $color-white;
+$color-bg-alt:         $color-cream;
+
+$color-primary:        $color-teal;
+$color-accent:          $color-coral;
+$color-accent-warm:     $color-ochre;
+$color-accent-cool:     $color-teal-green;
+$color-stamp:          $color-maroon;
+$color-hardware:       $color-brass;
+
+// ---- Derived (usability-checked) -----------------------------------
+// Per contrast table: white text on teal; black text on coral/ochre/cream.
+$color-on-primary:     $color-white;    // text on teal backgrounds
+$color-on-accent:      $color-black;    // text on coral backgrounds (6.8:1)
+$color-on-accent-warm: $color-black;     // text on ochre backgrounds (10:1)
+$color-on-stamp:       $color-white;     // text on maroon backgrounds (7.4:1)
+
+// ---- Borders / rules ------------------------------------------------
+$color-rule:           rgba($color-black, 0.18);
+$color-rule-strong:    rgba($color-black, 0.4);
+
+// ---- Typography -----------------------------------------------------
+$font-serif: "Hoefler Text", "Baskerville", "Georgia", "Times New Roman", serif;
+$font-sans:  "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$font-mono:  "Courier New", "Courier", monospace;
+
+// Mid-century formal: serif headings, slightly old-fashioned.
+$font-headings: $font-serif;
+$font-body:     $font-serif;
+
+// ---- Spacing / layout ------------------------------------------------
+$container-max: 1100px;
+$gutter: 1.5rem;
+$radius: 0;
+$nav-height: 72px;

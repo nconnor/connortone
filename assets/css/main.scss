@@ -1,0 +1,9 @@
+---
+# Jekyll SCSS entry point. Frontmatter required for Jekyll to process this file.
+# Output: assets/css/main.css (referenced in _includes/head.html)
+---
+
+@import "variables";
+@import "base";
+@import "layout";
+@import "components";

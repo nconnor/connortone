@@ -1,0 +1,62 @@
+# CONNORTONE Jekyll Configuration
+# Vintage mid-century American instrument company — GitHub Pages site
+
+title: CONNORTONE
+description: "CONNORTONE musical instruments. Marlborough, Mass. USA."
+url: "https://connortone.com"
+baseurl: ""
+
+# Collections — products use flat collection permalink (/:collection/:name/)
+# so /products/chowdinator/ style URLs. For current single product we override
+# with explicit permalinks; future products fall back to the collection default.
+collections:
+  products:
+    output: true
+    permalink: /:collection/:name/
+
+# Exclude large binaries and tooling sources from the Jekyll site build.
+# Note: *.f3z and *.f3d are NOT excluded — they are served as downloads
+# from assets/downloads/. The root-level copies and parts/ directory are
+# excluded, but files under assets/downloads/ are served as static files.
+exclude:
+  - "parts/"
+  - "documentation/*.xcf"
+  - "documentation/*.svg"
+  - "documentation/*.md"
+  - "documentation/*.pdf"
+  - "documentation/*.png"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "node_modules"
+  - "vendor"
+  - ".github"
+  - "Miter Jig v17.f3d"
+  - "StompBoxWork v93.f3z"
+  - "StompBoxWork v93.png"
+
+# Defaults — every page gets sensible defaults unless overridden in frontmatter.
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "products"
+    values:
+      layout: "product"
+
+# Sass / SCSS — Jekyll compiles assets/css/main.scss via the sass converter.
+sass:
+  style: compressed
+  sass_dir: _sass
+
+# Markdown + highlighting
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+
+# Plugins — keep minimal; github-pages gem pulls what we need.
+plugins:
+  - jekyll-seo-tag
