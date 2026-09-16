@@ -48,14 +48,17 @@ jobs:
           JEKYLL_ENV: production
       - name: Run html-proofer
         run: |
-          bundle exec htmlproofer ./_site \
-            --check-html \
-            --check-favicon \
-            --empty-alt-ignore \
-            --allow-hash-href \
-            --only-4xx \
-            --allow-redirects \
-            --disable-external
+          ruby -e '
+            require "html-proofer"
+            HTMLProofer.check_directory("./_site",
+              disable_external: true,
+              allow_hash_href: true,
+              empty_alt_ignore: true,
+              only_4xx: true,
+              check_html: true,
+              check_favicon: true
+            ).call
+          '
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
