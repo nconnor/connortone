@@ -7,20 +7,21 @@ nav_order: 3
 ---
 
 <section class="about-origin">
-  <h2>Concerning <strong>CONNORTONE</strong> Inc.</h2>
+  <h2>Concerning <strong>CONNORTONE</strong> Incorporated</h2>
 
   <p>
-    <strong>CONNORTONE</strong> Inc. of Marlborough, Massachusetts, was founded in 2022 upon the conviction that musical instrument
-    development came to a permanent end last year. Having arrived at this conclusion, and finding no reason to
-    revise it, we turned our attention to the manufacture of instruments that harness the awesome power of
-    American industry in 1934 — an era we regard as the final and unsurpassable peak of the form.
+    <strong>CONNORTONE</strong> Incorporated, of Marlborough, Massachusetts, was founded in 2022 upon the
+    conviction that musical instrument development came to a permanent end last year. No subsequent event has
+    given us cause to revise this position. We turned our attention to the manufacture of instruments that
+    harness the awesome power of American industry in 1934 — an era we regard as the final and unsurpassable
+    peak of the form.
   </p>
 
   <p>
-    We do not innovate. We do not iterate. We build to a standard we believe was already achieved and cannot be
-    improved upon. The Chowdinator CHDR(G) Porch Board Emulator is the result: an instrument precision-engineered
-    to replicate the experience of a rotten and loose front porch floorboard, equipped with HYPERCUSSION
-    technology, new for 1962.
+    We do not innovate. We do not iterate. We build to a standard we believe was already achieved and cannot
+    be improved upon. The Chowdinator CHDR(G) Porch Board Emulator is the result: an instrument
+    precision-engineered to replicate the experience of a rotten and loose front porch floorboard, equipped
+    with HYPERCUSSION technology, new for 1962.
   </p>
 </section>
 
@@ -28,15 +29,15 @@ nav_order: 3
   <h2>Our Philosophy</h2>
 
   <p>
-    We at <strong>CONNORTONE</strong> pride ourselves on our commitment to the concept that musical instrument development came to
-    a permanent end last year, and promise to continue manufacturing products that harness the awesome power of
+    We at <strong>CONNORTONE</strong> are committed to the concept that musical instrument development came
+    to a permanent end last year. We will continue to manufacture products that harness the awesome power of
     American industry in 1934. This is not nostalgia. It is certainty.
   </p>
 
   <p>
-    Every Chowdinator is built with materials we consider adequate: an embossed percussion surface, copper foil
-    shielding against electronic and metaphysical interference, and four (4) brass screws with four (4) brass
-    washers. The tone of the instrument improves with use. We have no further comment.
+    Every Chowdinator is built with materials we consider adequate: an embossed percussion surface, copper
+    foil shielding against electronic and metaphysical interference, and four (4) brass screws with four (4)
+    brass washers. The tone of the instrument improves with use. We have no further comment.
   </p>
 </section>
 
@@ -44,9 +45,9 @@ nav_order: 3
   <h2>A Brief History of <strong>CONNORTONE</strong></h2>
 
   <p>
-    <strong>CONNORTONE</strong> Inc. has endured. Through circumstances entirely beyond our control and through no fault of our
-    own, the company has weathered a century of interruptions — each one, we are certain, directly related to
-    our business.
+    <strong>CONNORTONE</strong> Incorporated has endured. Through circumstances entirely beyond our control
+    and through no fault of our own, the company has weathered a century of interruptions — each one, we are
+    certain, directly related to our business.
   </p>
 
   <div class="timeline-entries">
@@ -98,11 +99,11 @@ nav_order: 3
   <h2>Marlborough, Mass. USA</h2>
 
   <p>
-    <strong>CONNORTONE</strong> Inc. is presently headquartered in Marlborough, Massachusetts — the address on the logo, which we
-    consider the definitive one. Our former facilities in Schaumberg, Illinois and Dallas, Texas are now,
-    we are told, water parks. We have no comment on this. Our instruments are warranted against defects in
-    workmanship and materials for a period of five (5) years under normal residential use. For inquiries
-    concerning service, replacement percussion surfaces, or the influence of Allen Dulles, please
+    <strong>CONNORTONE</strong> Incorporated is headquartered in Marlborough, Massachusetts — the address on
+    the logo, which we consider definitive. Our former facilities in Schaumberg, Illinois and Dallas, Texas
+    are now, we are told, water parks. We have no comment on this. Our instruments are warranted against
+    defects in workmanship and materials for a period of five (5) years under normal residential use. For
+    inquiries concerning service, replacement percussion surfaces, or the influence of Allen Dulles, please
     <a href="/contact/">contact us</a>.
   </p>
 </section>

@@ -10,18 +10,17 @@ nav_order: 7
   <h2>Archives of Manufacture</h2>
 
   <p>
-    <strong>CONNORTONE</strong> hereby makes available for the discriminating craftsman the complete set of precision
-    industrial specifications, design archives, and additive manufacturing templates for the CHDR(G)
-    Chowdinator. These documents represent the full and final expression of the instrument — there will be
-    no revisions, as there can be no improvement upon a standard already achieved. We present them with the
-    gravity they deserve.
+    <strong>CONNORTONE</strong> makes available the complete set of precision industrial specifications,
+    design archives, and additive manufacturing templates for the CHDR(G) Chowdinator. These documents
+    represent the full and final expression of the instrument. There will be no revisions, as there can be
+    no improvement upon a standard already achieved. We present them with the gravity they deserve.
   </p>
 
   <p>
-    Each file is designated below by its formal title, its archival format, and its magnitude. <strong>CONNORTONE</strong>
-    accepts no responsibility for the use to which these specifications may be put, nor for the quality of
-    any instrument produced thereby by parties other than ourselves. The four (4) brass screws and four (4)
-    brass washers are not included in any archive.
+    Each file is designated below by its formal title, archival format, and magnitude.
+    <strong>CONNORTONE</strong> accepts no responsibility for the use to which these specifications may be
+    put, nor for the quality of any instrument produced thereby by parties other than ourselves. The four
+    (4) brass screws and four (4) brass washers are not included in any archive.
   </p>
 </section>
 
@@ -107,14 +106,15 @@ nav_order: 7
   <h3>Notes on Manufacture</h3>
 
   <p>
-    <strong>CONNORTONE</strong> presents these archives in good faith and with the expectation that they will be used for
-    their intended purpose: the construction of a precision porch board emulator. The tone of the instrument
-    improves with use. The embossed percussion surface may be replaced in the event of wear or finding a better
-    one at a flea market or on eBay. Do not omit the four (4) brass washers during reassembly.
+    <strong>CONNORTONE</strong> presents these archives in good faith and expects they will be used for
+    their intended purpose: the construction of a precision porch board emulator. The tone of the
+    instrument improves with use. The embossed percussion surface may be replaced in the event of wear, or
+    upon finding a better one at a flea market or on eBay. Do not omit the four (4) brass washers during
+    reassembly.
   </p>
 
   <p>
-    We have no further technical support to offer. The specifications are complete. The instrument is complete.
-    Thank you.
+    We have no further technical support to offer. The specifications are complete. The instrument is
+    complete. Thank you.
   </p>
 </section>

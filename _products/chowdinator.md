@@ -20,9 +20,10 @@ product_image: /assets/images/chowdinator-render.png
 
 <section class="product-intro">
   <p>
-    Congratulations on your acquisition of a fine <strong>CONNORTONE</strong> product, now with innovative HYPERCUSSION technology,
-    new for 1962. Your <strong>CONNORTONE</strong> instrument is a precision tool which should give you many years of service,
-    precisely emulating a rotten and loose front porch floorboard.
+    <strong>CONNORTONE</strong> extends its congratulations on your acquisition of a fine instrument, now
+    equipped with HYPERCUSSION technology, new for 1962. Your <strong>CONNORTONE</strong> instrument is a
+    precision tool. It should give you many years of service, precisely emulating a rotten and loose front
+    porch floorboard.
   </p>
 </section>
 
@@ -30,16 +31,20 @@ product_image: /assets/images/chowdinator-render.png
   <h2>Features</h2>
   <dl>
     <dt>Embossed percussion surface</dt>
-    <dd>12" x 6" embossed surface, replaceable via four (4) brass screws and four (4) brass washers. Fully ambidextrous — place either foot and commence to thumping.</dd>
+    <dd>A 12" x 6" embossed surface, replaceable by means of four (4) brass screws and four (4) brass washers.
+    Fully ambidextrous. The discriminating musician may place either foot and commence to thumping.</dd>
 
     <dt>Copper-shielded pickup cavity</dt>
-    <dd>The amplifier pickup cavity is lined with copper foil to eliminate electronic interference, rather than aluminum, as we have found that aluminum foil is not sufficient shielding against amplifiers, electric instruments, messages from the Devil, or the influence of Allen Dulles.</dd>
+    <dd>The amplifier pickup cavity is lined with copper foil to eliminate electronic interference. We employ
+    copper rather than aluminum, having determined that aluminum foil is not sufficient shielding against
+    amplifiers, electric instruments, messages from the Devil, or the influence of Allen Dulles.</dd>
 
     <dt>TONE and VOL controls</dt>
-    <dd>Your Chowdinator is equipped with both TONE and VOLUME control knobs on the rear of the instrument. They may or may not do anything useful.</dd>
+    <dd>Your Chowdinator is equipped with both TONE and VOLUME control knobs, rear-mounted in accordance with
+    <strong>CONNORTONE</strong> design philosophy. They may or may not do anything useful.</dd>
 
     <dt>&frac14;" monophonic output</dt>
-    <dd>Standard &frac14;" monophonic output jack for connection to your amplifier or recording apparatus.</dd>
+    <dd>A standard &frac14;" monophonic output jack for connection to your amplifier or recording apparatus.</dd>
 
     <dt>Hardware</dt>
     <dd>Four (4) brass screws. Four (4) brass washers. Do not omit the brass washers during reinstallation.</dd>
@@ -49,13 +54,13 @@ product_image: /assets/images/chowdinator-render.png
 <section class="product-hints">
   <h2>Hints on Playing Your Chowdinator</h2>
   <p>
-    Like every other musical instrument, your Chowdinator Porch Board Emulator requires a small amount of study if
-    the best results are to be obtained. Therefore, a little application will greatly increase the pleasure to be
-    derived from this charming instrument.
+    Your Chowdinator Porch Board Emulator, like every musical instrument, requires a modest degree of study
+    if the best results are to be obtained. A small application of effort will greatly increase the pleasure
+    to be derived from this charming instrument.
   </p>
   <p>
-    Place either foot on the 12" x 6" embossed percussion surface and commence to thumping. The CHDR(G) is fully
-    ambidextrous. The tone of the instrument improves with use.
+    Place either foot on the 12" x 6" embossed percussion surface and commence to thumping. The CHDR(G) is
+    fully ambidextrous. The tone of the instrument improves with use.
   </p>
 </section>
 
@@ -72,9 +77,9 @@ product_image: /assets/images/chowdinator-render.png
     <li>Premium VOL badging</li>
   </ol>
   <p>
-    The embossed percussion surface can be easily replaced in the event of wear or finding a better one at a flea
-    market or on eBay by detaching the four (4) brass screws and substituting the new plate. Do not omit the four
-    (4) brass washers during reinstallation.
+    The embossed percussion surface may be replaced in the event of wear, or upon finding a better one at a
+    flea market or on eBay, by detaching the four (4) brass screws and substituting the new plate. Do not
+    omit the four (4) brass washers during reinstallation.
   </p>
 </section>
 

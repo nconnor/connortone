@@ -10,10 +10,11 @@ nav_order: 6
   <h2>Contact <strong>CONNORTONE</strong></h2>
 
   <p>
-    <strong>CONNORTONE</strong> Inc. is presently headquartered in Marlborough, Massachusetts, USA. Our former facilities in
-    Schaumberg, Illinois and Dallas, Texas are now water parks. We are unable to accept correspondence at
-    those addresses. For inquiries concerning warranty service, replacement percussion surfaces, replacement
-    brass screws and washers, or the influence of Allen Dulles, please contact us by one of the methods below.
+    <strong>CONNORTONE</strong> Incorporated is headquartered in Marlborough, Massachusetts, USA. Our former
+    facilities in Schaumberg, Illinois and Dallas, Texas are now, we are told, water parks. We are unable
+    to accept correspondence at those addresses. For inquiries concerning warranty service, replacement
+    percussion surfaces, replacement brass screws and washers, or the influence of Allen Dulles, please
+    contact us by one of the methods below.
   </p>
 </section>
 
@@ -40,20 +41,20 @@ nav_order: 6
 <section class="contact-warranty">
   <h3>Warranty Service</h3>
   <p>
-    For warranty claims, please see our <a href="/warranty/">Warranty of Craftsmanship</a> page for full terms,
-    exclusions, and instructions on how to obtain service. Claims for defective merchandise must be made within
-    one (1) year from invoice date. Pictures and a copy of the original invoice are required. Returns must be
-    packed in original packaging. We reserve the right to specify that items be returned to the original
-    warehouse for inspection or be inspected by our representative in the field — whichever is not currently a
-    water park.
+    For warranty claims, please see our <a href="/warranty/">Warranty of Craftsmanship</a> page for full
+    terms, exclusions, and instructions on how to obtain service. Claims for defective merchandise must be
+    submitted within one (1) year of the invoice date. Photographs and a copy of the original invoice are
+    required. Returns must be packed in original packaging. We reserve the right to specify that items be
+    returned to the original warehouse for inspection, or inspected by our representative in the field —
+    whichever is not currently a water park.
   </p>
 </section>
 
 <section class="contact-parts">
   <h3>Replacement Parts</h3>
   <p>
-    The embossed percussion surface can be easily replaced in the event of wear or finding a better one at a
-    flea market or on eBay by detaching the four (4) brass screws and substituting the new plate. Do not omit
-    the four (4) brass washers during reinstallation.
+    The embossed percussion surface may be replaced in the event of wear, or upon finding a better one at a
+    flea market or on eBay, by detaching the four (4) brass screws and substituting the new plate. Do not
+    omit the four (4) brass washers during reinstallation.
   </p>
 </section>
