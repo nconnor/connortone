@@ -235,12 +235,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--sp-4); // 24px
+  gap: var(--sp-3); // 16px — positive clearance, matches hero caption gap
+}
+
+// Zero the caption top margin inside flex containers (gap handles spacing)
+.product-plate-media .plate-caption {
+  margin-top: 0;
 }
 
 .product-plate-img {
-  max-height: 420px;
-  width: auto;
+  max-width: 680px; // grow the object — was max-height 420px (~525px wide)
+  width: 100%;       // fill up to max-width, center via parent
+  height: auto;
   margin: 0 auto;
   border: 0; // floating on field
 }
@@ -527,7 +533,8 @@ table.specs td {
 
 .timeline-entry {
   position: relative;
-  padding: 0 0 var(--sp-5) var(--sp-5); // 32px spacing, 32px left indent
+  padding: 0 0 0 var(--sp-5); // 32px left indent, no bottom padding
+  margin-bottom: var(--sp-5); // 32px between entries — proximity grouping
 }
 
 // NO ::before pseudo-element — no dots, no circles, no icons.
