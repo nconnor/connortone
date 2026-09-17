@@ -20,12 +20,15 @@
 }
 
 // ---- Section rhythm (96px desktop / 64px mobile) — §3 --------------
-.section {
+// Bare element selector ensures ALL <section> elements get proper spacing,
+// including those in page/manual layouts that lack .section class.
+// Class-specific rules have higher specificity and remain unaffected.
+section {
   padding-block: var(--sp-8); // 96px desktop
 }
 
 @media (max-width: 860px) {
-  .section {
+  section {
     padding-block: var(--sp-7); // 64px mobile
   }
 }
