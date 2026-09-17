@@ -66,7 +66,7 @@
   color: var(--color-accent); // coral — the one action per viewport
   text-decoration: none;
   border-bottom: 2px solid var(--color-accent);
-  padding-bottom: var(--sp-2); // 8px
+  padding-bottom: var(--sp-1); // 4px
   transition: color var(--transition);
 }
 
@@ -85,7 +85,7 @@
   font-size: var(--fs-label); // 13px
   text-transform: uppercase;
   letter-spacing: var(--ls-label);
-  padding: var(--sp-2) var(--sp-3); // 8px 16px
+  padding: var(--sp-1) var(--sp-3); // 4px 16px
   border: 1px solid currentColor;
   border-radius: 0;
 }
@@ -512,10 +512,10 @@ table.specs td {
 }
 
 // ---- Timeline (about page) — type-only, no dots --------------------
-// ---- Timeline — Saul Bass treatment ---------------------------------------
-// Each entry is a mini-poster: large date as headline, geometric node,
-// event text in serif, punchline gets visual weight.
-// The seriousness of the frame makes the rotten-porch-board payload land.
+// ---- Timeline — Saul Bass treatment (§10) --------------------------------
+// Each entry is a mini-poster: oversized year, skewed date banner,
+// coral node on ink bar, punchline as poster-line.
+// The company isn't narrating history — it's filing it.
 
 .timeline {
   list-style: none;
@@ -524,11 +524,11 @@ table.specs td {
   position: relative;
 }
 
-// 3px ink bar — bold, not hairline. This is a poster spine, not a margin rule.
+// 3px ink bar — poster spine
 .timeline::before {
   content: "";
   position: absolute;
-  left: 14px;
+  left: 7px;
   top: 0;
   bottom: 0;
   width: 3px;
@@ -537,37 +537,74 @@ table.specs td {
 
 .timeline-entry {
   position: relative;
-  padding: 0 0 var(--sp-7) var(--sp-6); // 64px bottom, 48px left indent
+  padding: 0 0 var(--sp-8) var(--sp-6); // 96px bottom, 48px left indent
   margin-bottom: 0;
+
+  // Alternating band ground — white/cream per entry
+  &:nth-child(odd) {
+    background: var(--color-white);
+  }
+  &:nth-child(even) {
+    background: var(--color-cream);
+  }
+  // Padding for the band effect
+  padding-top: var(--sp-7); // 64px top
+  padding-left: var(--sp-6); // 48px left (clears the bar)
+  padding-right: var(--sp-4); // 24px right
+  margin-left: calc(-1 * var(--sp-4)); // extend to container edge
+  margin-right: calc(-1 * var(--sp-4));
 }
 
-// Geometric node — coral circle with ink ring, sitting on the bar.
-// Bass used bold geometric shapes; a circle is the simplest punch.
+// 16px coral node with 3px ink ring, sitting on the bar
 .timeline-entry::before {
   content: "";
   position: absolute;
-  left: 6px;
-  top: 4px;
-  width: 20px;
-  height: 20px;
-  background: var(--color-accent); // coral — the one accent moment
+  left: 0;
+  top: var(--sp-7);
+  width: 16px;
+  height: 16px;
+  background: var(--color-accent); // coral
   border: 3px solid var(--color-primary); // ink ring
   border-radius: 50%;
   z-index: 1;
 }
 
-// Dates: display poster headline, not a label.
-// Jost 500, 35px, ink — the date IS the poster.
+// Date banner — cut-paper skewed plane, black on coral
+// Text is counter-skewed to stay level
+.timeline-date-banner {
+  display: inline-block;
+  background: var(--color-accent); // coral
+  color: var(--color-black); // black on coral — 6.8:1, never white
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--fs-label); // 13px
+  text-transform: uppercase;
+  letter-spacing: var(--ls-label); // 0.12em
+  padding: var(--sp-1) var(--sp-3); // 4px 16px
+  transform: skewX(var(--skew-brand)); // -6deg — same as warranty stamp
+  margin-bottom: var(--sp-3); // 16px
+  border-radius: 0;
+}
+.timeline-date-banner span {
+  display: inline-block;
+  transform: skewX(calc(-1 * var(--skew-brand))); // counter-skew: text stays level
+}
+
+// Year — oversized poster headline
+// Jost 600, 64px desktop / 44px mobile, ink, flush left
 .timeline-year {
   font-family: var(--font-display);
-  font-weight: 500;
-  font-size: var(--fs-h3); // 35px — poster headline scale
-  line-height: 1.15;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
   color: var(--color-primary); // ink teal
   display: block;
   margin-bottom: var(--sp-3); // 16px
+
+  @media (max-width: 860px) {
+    font-size: 44px;
+  }
 }
 
 // Event text: serif body, flush left
@@ -579,11 +616,39 @@ table.specs td {
   max-width: var(--measure-ch); // 68ch
 }
 
-// The last sentence — the punchline — gets a poster-line treatment.
-// A 3px coral left rule separates the setup from the payoff.
-// This is the "It goes well." moment — the brevity IS the design.
-.timeline-text strong {
+// Punchline — poster line treatment
+// Jost 600, 22px, ink, own line, 32px top margin
+// The brevity IS the design — "It goes well." in heavy type against the serif body
+.poster-line {
+  display: block;
+  font-family: var(--font-display);
   font-weight: 600;
+  font-size: var(--fs-h4); // 28px — using h4 scale (closest to spec's 22px in our token set)
+  line-height: 1.3;
+  color: var(--color-primary); // ink
+  margin-top: var(--sp-5); // 32px
+}
+
+// ---- Memorabilia plate (About page, Fig. 2) -------------------------------
+.about-memorabilia {
+  padding-block: var(--sp-8); // 96px
+  text-align: center;
+}
+
+.plate-figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-3); // 24px
+}
+
+.plate-img {
+  max-height: 420px;
+  width: auto;
+  margin: 0 auto;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 // ---- Warranty stamp (§5: 2px maroon border, Jost, rotate −6°) -----
@@ -599,7 +664,7 @@ table.specs td {
   letter-spacing: var(--ls-label); // 0.12em
   font-size: var(--fs-label); // 13px
   padding: var(--sp-3) var(--sp-4); // 16px 24px
-  transform: rotate(-6deg);
+  transform: rotate(var(--skew-brand)); // -6deg — shared with timeline banner (§10 binding constraint)
   margin: var(--sp-4) 0; // 24px
   border-radius: 0;
 }

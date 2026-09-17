@@ -53,39 +53,44 @@ nav_order: 3
   <ul class="timeline">
 
     <li class="timeline-entry">
-      <h3 class="timeline-year">29 Oct 1929</h3>
+      <div class="timeline-date-banner"><span>OCT 29</span></div>
+      <h3 class="timeline-year">1929</h3>
       <p class="timeline-text">
         <strong>CONNORTONE</strong> opens for business, optimistic that the 1930s will see an explosion in demand for leisure and
-        luxury goods. It does not go well.
+        luxury goods. <span class="poster-line">It does not go well.</span>
       </p>
     </li>
 
     <li class="timeline-entry">
-      <h3 class="timeline-year">7 Dec 1941</h3>
+      <div class="timeline-date-banner"><span>DEC 7</span></div>
+      <h3 class="timeline-year">1941</h3>
       <p class="timeline-text">
         <strong>CONNORTONE</strong> announces its new line of Eastern-influenced instruments, and pioneers outsourcing by
-        manufacturing product in Manchuria. It does not go well.
+        manufacturing product in Manchuria. <span class="poster-line">It does not go well.</span>
       </p>
     </li>
 
     <li class="timeline-entry">
-      <h3 class="timeline-year">8 Aug 1945</h3>
+      <div class="timeline-date-banner"><span>AUG 8</span></div>
+      <h3 class="timeline-year">1945</h3>
       <p class="timeline-text">
         <strong>CONNORTONE</strong>'s new Schaumberg, Illinois facility opens, leveraging the latest in technology: elves and
-        waterwheels. It goes as well as can be expected.
+        waterwheels. <span class="poster-line">It goes as well as can be expected.</span>
       </p>
     </li>
 
     <li class="timeline-entry">
-      <h3 class="timeline-year">22 Nov 1963</h3>
+      <div class="timeline-date-banner"><span>NOV 22</span></div>
+      <h3 class="timeline-year">1963</h3>
       <p class="timeline-text">
         Water infiltration into the Schaumberg plant forces a temporary move to Dallas, Texas. Staff returns to
-        Illinois on November 23, 1963. It goes well.
+        Illinois on November 23, 1963. <span class="poster-line">It goes well.</span>
       </p>
     </li>
 
     <li class="timeline-entry">
-      <h3 class="timeline-year">24 Jul 1969</h3>
+      <div class="timeline-date-banner"><span>JUL 24</span></div>
+      <h3 class="timeline-year">1969</h3>
       <p class="timeline-text">
         The company announces a new direction after failing to foresee the popularity of the electric guitar. The
         plant is demolished and replaced with a water park.
@@ -93,6 +98,13 @@ nav_order: 3
     </li>
 
   </ul>
+</section>
+
+<section class="about-memorabilia band-cream">
+  <div class="plate-figure">
+    <img src="/assets/images/chowhound-plate.png" alt="CONNORTONE company memorabilia — The Chowhound, Mississippi plate" class="plate-img" />
+    <p class="plate-caption">FIG. 2 &mdash; COMPANY MEMORABILIA &middot; &ldquo;THE CHOWHOUND&rdquo; &middot; MISSISSIPPI PLATE, OCT 76</p>
+  </div>
 </section>
 
 <section class="about-location">

@@ -76,7 +76,8 @@
   --ls-label:   0.12em;    // +0.12em for ALL CAPS labels
 
   // ---- Spacing (§3) — 8px baseline, tokens $sp-1…$sp-8 ------------
-  --sp-2: 8px;     // tight element padding, inline gaps (was sp-1)
+  --sp-1: 4px;     // inline icon gaps (half-step, per canonical §3)
+  --sp-2: 8px;     // tight element padding
   --sp-3: 16px;    // component internal padding
   --sp-4: 24px;    // gutter (all containers), card padding
   --sp-5: 32px;    // between related blocks (h2 → body)
@@ -84,6 +85,9 @@
   --sp-7: 64px;    // between major sections (mobile)
   --sp-8: 96px;    // between major sections (desktop)
   --sp-9: 128px;   // hero breathing room (desktop)
+
+  // ---- Brand diagonal (§10) — shared by timeline banner + warranty stamp
+  --skew-brand: -6deg;
 
   // ---- Layout (§4) -------------------------------------------------
   --container-max: 1100px;
@@ -145,8 +149,8 @@ $color-rule-strong: rgba(0, 0, 0, 0.4);
 $rule-w:            3px;
 $rule-w-hair:       1px;
 
-// Spacing (§3) — 8px baseline grid (no 4px step)
-$sp-2: 8px;  $sp-3: 16px; $sp-4: 24px;
+// Spacing (§3) — 8px baseline grid + 4px half-step for inline gaps
+$sp-1: 4px;  $sp-2: 8px;  $sp-3: 16px; $sp-4: 24px;
 $sp-5: 32px; $sp-6: 48px; $sp-7: 64px;  $sp-8: 96px;  $sp-9: 128px;
 
 // Layout
