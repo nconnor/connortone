@@ -18,17 +18,16 @@
 
   --color-teal:        #264653;  // structure: nav, footer, headings, brand rules
   --color-coral:       #E76F51;  // one action per view: CTA, active nav, kicker
-  --color-ochre:       #F4A261;  // hover/warmth secondary
-  --color-teal-green:  #2A9D8F;  // semantic "cool note" (in stock, verified)
-  --color-teal-green-text: #1F7A70;  // darkened for TEXT/borders on white — 5.15:1 AA (raw #2A9D8F fails at 3.32:1)
+  // Retired colours (kept as comments for reference, NOT in active use):
+  // --color-ochre:       #F4A261;
+  // --color-teal-green:  #2A9D8F;
+  // --color-brass:       #C5A059;
   --color-maroon:      #800000;  // warranty stamp device ONLY
-  --color-brass:       #C5A059;  // hardware-detail icons/rules on product pages
   --color-charcoal:    #2C2C2C;  // engraved text / dark UI
 
   // ---- Contrast pairs (§5) — codified, never violate --------------
   --on-teal:        var(--color-white);   // 9.5:1 — white text on teal
   --on-coral:       var(--color-black);   // 6.8:1 — black text on coral (NEVER white 3.1:1)
-  --on-ochre:       var(--color-black);   // 10:1  — black text on ochre
   --on-maroon:      var(--color-white);   // 7.4:1 — white text on maroon
   --on-cream:       var(--color-black);   // 19:1  — black text on cream
 
@@ -38,11 +37,7 @@
   --color-bg-alt:      var(--color-cream);
   --color-primary:     var(--color-teal);     // structure
   --color-accent:      var(--color-coral);     // one action
-  --color-accent-warm: var(--color-ochre);     // hover
-  --color-accent-cool: var(--color-teal-green); // semantic
-  --color-accent-cool-text: var(--color-teal-green-text); // AA-safe text/border variant
   --color-stamp:       var(--color-maroon);
-  --color-hardware:    var(--color-brass);
 
   --color-rule:        rgba(0, 0, 0, 0.18);   // hairline rules (§4: $rule-w-hair)
   --color-rule-brand:  var(--color-teal);      // brand rules (§4: $rule-w)
@@ -81,14 +76,14 @@
   --ls-label:   0.12em;    // +0.12em for ALL CAPS labels
 
   // ---- Spacing (§3) — 8px baseline, tokens $sp-1…$sp-8 ------------
-  --sp-1: 4px;     // inline icon gaps
-  --sp-2: 8px;     // tight element padding
+  --sp-2: 8px;     // tight element padding, inline gaps (was sp-1)
   --sp-3: 16px;    // component internal padding
   --sp-4: 24px;    // gutter (all containers), card padding
   --sp-5: 32px;    // between related blocks (h2 → body)
   --sp-6: 48px;    // between subsections
   --sp-7: 64px;    // between major sections (mobile)
-  --sp-8: 96px;    // between major sections (desktop); product-plate clear margin
+  --sp-8: 96px;    // between major sections (desktop)
+  --sp-9: 128px;   // hero breathing room (desktop)
 
   // ---- Layout (§4) -------------------------------------------------
   --container-max: 1100px;
@@ -128,10 +123,7 @@ $color-white:       #FFFFFF;
 $color-cream:       #F0F0E6;
 $color-teal:        #264653;
 $color-coral:       #E76F51;
-$color-ochre:       #F4A261;
-$color-teal-green:  #2A9D8F;
 $color-maroon:      #800000;
-$color-brass:       #C5A059;
 $color-charcoal:    #2C2C2C;
 
 // Semantic mappings
@@ -140,15 +132,11 @@ $color-bg:          $color-white;
 $color-bg-alt:      $color-cream;
 $color-primary:     $color-teal;
 $color-accent:      $color-coral;
-$color-accent-warm: $color-ochre;
-$color-accent-cool: $color-teal-green;
 $color-stamp:       $color-maroon;
-$color-hardware:    $color-brass;
 
 // Contrast pairs (§5)
 $color-on-primary:     $color-white;   // on teal
 $color-on-accent:      $color-black;   // on coral — NEVER white
-$color-on-accent-warm: $color-black;   // on ochre
 $color-on-stamp:       $color-white;   // on maroon
 
 // Rules
@@ -157,9 +145,9 @@ $color-rule-strong: rgba(0, 0, 0, 0.4);
 $rule-w:            3px;
 $rule-w-hair:       1px;
 
-// Spacing (§3)
-$sp-1: 4px;  $sp-2: 8px;  $sp-3: 16px;  $sp-4: 24px;
-$sp-5: 32px; $sp-6: 48px; $sp-7: 64px;  $sp-8: 96px;
+// Spacing (§3) — 8px baseline grid (no 4px step)
+$sp-2: 8px;  $sp-3: 16px; $sp-4: 24px;
+$sp-5: 32px; $sp-6: 48px; $sp-7: 64px;  $sp-8: 96px;  $sp-9: 128px;
 
 // Layout
 $container-max:  1100px;

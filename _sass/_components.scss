@@ -66,7 +66,7 @@
   color: var(--color-accent); // coral — the one action per viewport
   text-decoration: none;
   border-bottom: 2px solid var(--color-accent);
-  padding-bottom: var(--sp-1); // 4px
+  padding-bottom: var(--sp-2); // 8px
   transition: color var(--transition);
 }
 
@@ -85,7 +85,7 @@
   font-size: var(--fs-label); // 13px
   text-transform: uppercase;
   letter-spacing: var(--ls-label);
-  padding: var(--sp-1) var(--sp-3); // 4px 16px
+  padding: var(--sp-2) var(--sp-3); // 8px 16px
   border: 1px solid currentColor;
   border-radius: 0;
 }
@@ -512,53 +512,78 @@ table.specs td {
 }
 
 // ---- Timeline (about page) — type-only, no dots --------------------
-// Per @art-director ruling: structure carried by type alone.
-// Hairline left rule, dates in teal Jost caps, events in serif body.
+// ---- Timeline — Saul Bass treatment ---------------------------------------
+// Each entry is a mini-poster: large date as headline, geometric node,
+// event text in serif, punchline gets visual weight.
+// The seriousness of the frame makes the rotten-porch-board payload land.
+
 .timeline {
   list-style: none;
   padding: 0;
-  margin: var(--sp-6) 0; // 48px
+  margin: var(--sp-7) 0; // 64px
   position: relative;
 }
 
-// 1px vertical hairline rule at left
+// 3px ink bar — bold, not hairline. This is a poster spine, not a margin rule.
 .timeline::before {
   content: "";
   position: absolute;
-  left: 0;
+  left: 14px;
   top: 0;
   bottom: 0;
-  width: var(--rule-w-hair); // 1px hairline
-  background: var(--color-rule); // rgba(0,0,0,0.18)
+  width: 3px;
+  background: var(--color-primary); // ink teal
 }
 
 .timeline-entry {
   position: relative;
-  padding: 0 0 0 var(--sp-5); // 32px left indent, no bottom padding
-  margin-bottom: var(--sp-5); // 32px between entries — proximity grouping
+  padding: 0 0 var(--sp-7) var(--sp-6); // 64px bottom, 48px left indent
+  margin-bottom: 0;
 }
 
-// NO ::before pseudo-element — no dots, no circles, no icons.
-// The type hierarchy alone carries the structure.
+// Geometric node — coral circle with ink ring, sitting on the bar.
+// Bass used bold geometric shapes; a circle is the simplest punch.
+.timeline-entry::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 4px;
+  width: 20px;
+  height: 20px;
+  background: var(--color-accent); // coral — the one accent moment
+  border: 3px solid var(--color-primary); // ink ring
+  border-radius: 50%;
+  z-index: 1;
+}
 
-// Dates: label style (Jost 500, 13px, UPPERCASE, +0.12em, teal)
+// Dates: display poster headline, not a label.
+// Jost 500, 35px, ink — the date IS the poster.
 .timeline-year {
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: var(--fs-label); // 13px
+  font-size: var(--fs-h3); // 35px — poster headline scale
+  line-height: 1.15;
   text-transform: uppercase;
-  letter-spacing: var(--ls-label); // 0.12em
-  color: var(--color-primary); // teal
+  letter-spacing: 0.02em;
+  color: var(--color-primary); // ink teal
   display: block;
-  margin-bottom: var(--sp-2); // 8px
+  margin-bottom: var(--sp-3); // 16px
 }
 
-// Event text: body serif, flush left beside the rule
+// Event text: serif body, flush left
 .timeline-text {
   font-family: var(--font-body);
   font-size: var(--fs-body); // 18px
   line-height: var(--lh-body); // 1.6
   color: var(--color-text);
+  max-width: var(--measure-ch); // 68ch
+}
+
+// The last sentence — the punchline — gets a poster-line treatment.
+// A 3px coral left rule separates the setup from the payoff.
+// This is the "It goes well." moment — the brevity IS the design.
+.timeline-text strong {
+  font-weight: 600;
 }
 
 // ---- Warranty stamp (§5: 2px maroon border, Jost, rotate −6°) -----
