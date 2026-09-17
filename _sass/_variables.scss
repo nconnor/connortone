@@ -20,6 +20,7 @@
   --color-coral:       #E76F51;  // one action per view: CTA, active nav, kicker
   --color-ochre:       #F4A261;  // hover/warmth secondary
   --color-teal-green:  #2A9D8F;  // semantic "cool note" (in stock, verified)
+  --color-teal-green-text: #1F7A70;  // darkened for TEXT/borders on white — 5.15:1 AA (raw #2A9D8F fails at 3.32:1)
   --color-maroon:      #800000;  // warranty stamp device ONLY
   --color-brass:       #C5A059;  // hardware-detail icons/rules on product pages
   --color-charcoal:    #2C2C2C;  // engraved text / dark UI
@@ -39,6 +40,7 @@
   --color-accent:      var(--color-coral);     // one action
   --color-accent-warm: var(--color-ochre);     // hover
   --color-accent-cool: var(--color-teal-green); // semantic
+  --color-accent-cool-text: var(--color-teal-green-text); // AA-safe text/border variant
   --color-stamp:       var(--color-maroon);
   --color-hardware:    var(--color-brass);
 
