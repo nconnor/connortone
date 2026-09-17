@@ -59,12 +59,6 @@
   width: auto;
 }
 
-// TODO(§8 asset request 2): Replace .logo-knockout filter with white knockout SVG
-// when @user provides the asset. This utility class dies at that point.
-.logo-knockout {
-  filter: brightness(0) invert(1); // knock out black logo to white for teal bg
-}
-
 .nav-menu {
   list-style: none;
   display: flex;
@@ -142,7 +136,7 @@
   gap: var(--sp-3);
 }
 
-// Logo at 48px — white knockout via .logo-knockout utility (see TODO above)
+// Logo at 48px — white knockout asset (connortone-logo-white.png)
 .footer-logo {
   height: 48px;
   width: auto;
