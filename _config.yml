@@ -58,5 +58,4 @@ kramdown:
   auto_ids: true
 
 # Plugins — keep minimal; github-pages gem pulls what we need.
-plugins:
-  - jekyll-seo-tag
+plugins: []

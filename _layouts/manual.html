@@ -4,17 +4,25 @@ layout: default
 <article class="manual" aria-label="{{ page.title }}">
   <header class="manual-header">
     <div class="container">
-      <p class="manual-eyebrow">Product Manual</p>
-      <h1 class="manual-title">{{ page.product_name | default: page.title }}</h1>
-      {% if page.revision %}
-      <p class="manual-revision">Revision {{ page.revision }}</p>
-      {% endif %}
+      <div class="grid-12">
+        <div class="col-content">
+          <p class="manual-eyebrow">Product Manual</p>
+          <h1 class="manual-title">{{ page.product_name | default: page.title }}</h1>
+          {% if page.revision %}
+          <p class="manual-revision">Revision {{ page.revision }}</p>
+          {% endif %}
+        </div>
+      </div>
     </div>
   </header>
 
   <div class="manual-content">
     <div class="container">
-      {{ content }}
+      <div class="grid-12">
+        <div class="col-content measure">
+          {{ content }}
+        </div>
+      </div>
     </div>
   </div>
 

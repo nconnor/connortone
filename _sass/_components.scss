@@ -1,267 +1,291 @@
 // ============================================================
-//  Connortone — Components (hero, product card, feature list, timeline)
+//  CONNORTONE — Components
+//  ALL flat: zero shadows, zero gradients, zero radius, zero filters.
+//  Motion: 150ms color/border transitions only.
 // ============================================================
 
 @import "variables";
 
 // ---- Section title (shared) ----------------------------------------
+// Headings are already styled in _base; this is just spacing.
 .section-title {
-  font-family: $font-headings;
-  color: $color-primary;
-  border-bottom: 2px solid $color-accent;
-  display: inline-block;
-  padding-bottom: 0.25em;
-  margin-bottom: 1.5rem;
+  display: block;
+  margin-bottom: var(--s4);
 }
 
-// ---- Buttons --------------------------------------------------------
+// ---- Buttons (flat rectangle, 2px ink border) ----------------------
 .btn {
   display: inline-block;
-  padding: 0.65em 1.4em;
-  font-family: $font-headings;
-  font-size: 1rem;
-  letter-spacing: 0.03em;
+  padding: 14px 28px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--text-xs); // 13px
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   text-decoration: none;
-  border: 2px solid $color-primary;
-  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  border: 2px solid var(--color-ink);
+  border-radius: 0;
+  transition: background var(--transition), color var(--transition), border-color var(--transition);
 }
 
+// Primary = ink fill / paper text, hover = coral fill
 .btn-primary {
-  background: $color-primary;
-  color: $color-on-primary;
-  border-color: $color-primary;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  border-color: var(--color-ink);
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
-  background: $color-accent;
-  color: $color-on-accent;
-  border-color: $color-accent;
+  background: var(--color-accent);
+  color: var(--color-paper);
+  border-color: var(--color-accent);
 }
 
+// Outline = transparent / ink, hover = ink fill
 .btn-outline {
   background: transparent;
-  color: $color-primary;
-  border-color: $color-primary;
+  color: var(--color-ink);
+  border-color: var(--color-ink);
 }
 
 .btn-outline:hover,
 .btn-outline:focus {
-  background: $color-primary;
-  color: $color-on-primary;
+  background: var(--color-ink);
+  color: var(--color-paper);
 }
 
-// ---- Hero (home) ---------------------------------------------------
+// ---- Status badges (Courier 700 13px uppercase, ink, one treatment) -
+.product-status,
+.status-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: var(--text-xs); // 13px
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 4px 12px;
+  border: 1px solid currentColor;
+  color: var(--color-ink);
+  border-radius: 0;
+}
+
+// Retire per-status colors — one treatment, ink only.
+.product-status-available,
+.product-status-coming-soon,
+.product-status-concept {
+  color: var(--color-ink);
+}
+
+// ---- Hero (home) — museum plate on cream ---------------------------
 .hero {
-  background: $color-bg-alt;
-  border-bottom: 3px solid $color-primary;
-  padding: 3rem 0;
+  background: var(--color-paper-alt); // cream field
+  padding-block: var(--s8); // 128px breathing room
+  text-align: center; // centered ceremonial composition
 }
 
 .hero-inner {
-  max-width: $container-max;
+  max-width: var(--container-max);
   margin: 0 auto;
-  padding: 0 $gutter;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  padding: 0 var(--s3);
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 2.5rem;
-}
-
-.hero-logo {
-  text-align: center;
+  gap: var(--s5); // 48px between plate elements
 }
 
 .hero-logo-img {
-  max-height: 180px;
+  max-height: 160px;
   width: auto;
   margin: 0 auto;
 }
 
-.hero-tagline {
-  text-align: center;
-}
-
-.hero-tagline-main {
-  font-family: $font-headings;
-  font-size: 1.6rem;
-  color: $color-primary;
-  line-height: 1.3;
-  margin-bottom: 0.5em;
-}
-
-.hero-tagline-sub {
-  font-size: 1rem;
-  color: $color-charcoal;
-  letter-spacing: 0.05em;
-}
-
-.hero-render {
-  grid-column: 1 / -1;
-  text-align: center;
-  margin-top: 1rem;
+.hero-display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-display);
+  line-height: var(--leading-display);
+  color: var(--color-ink);
+  letter-spacing: -0.01em;
+  margin: 0;
 }
 
 .hero-render-img {
   max-height: 420px;
   width: auto;
   margin: 0 auto;
-  border: 1px solid $color-rule;
+  border: 0; // NO border — floating on cream
 }
 
-@media (min-width: 860px) {
-  .hero-render {
-    grid-column: auto;
-  }
-  .hero-inner {
-    grid-template-columns: 1fr 1fr;
-  }
-  .hero-render {
-    grid-column: 1 / -1;
-  }
+// Caption directly beneath the render — the joke's straight face.
+.hero-caption,
+.plate-caption {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs); // 13px
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-ink);
+  margin: 0;
 }
 
-// ---- Home intro ----------------------------------------------------
+// ---- Home intro / featured (flush-left asymmetric below hero) ------
 .home-intro {
-  padding: 2.5rem 0;
+  padding-block: var(--s7);
 }
 
 .home-featured {
-  background: $color-bg-alt;
-  padding: 2.5rem 0;
-  border-top: 1px solid $color-rule;
-  border-bottom: 1px solid $color-rule;
+  background: var(--color-paper-alt); // alternating cream band
+  padding-block: var(--s7);
+  border-top: 1px solid var(--color-rule);
+  border-bottom: 1px solid var(--color-rule);
 }
 
-// ---- Product card --------------------------------------------------
-.product-card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: center;
-  background: $color-bg;
-  border: 1px solid $color-rule;
-  padding: 1.5rem;
-}
-
-.product-card-media {
+// ---- Product plate (museum-object treatment) -----------------------
+// Single hero image, centered, generous margin, mono plate caption.
+// No cards, no shadows, no badges floating around it.
+.product-plate {
+  background: var(--color-paper-alt);
+  padding-block: var(--s7);
   text-align: center;
 }
 
-.product-card-img {
-  max-height: 320px;
-  width: auto;
-  margin: 0 auto;
-}
-
-.product-card-code {
-  font-family: $font-headings;
-  color: $color-accent;
-  letter-spacing: 0.05em;
-  margin-bottom: 0.5em;
-}
-
-.product-card-desc {
-  margin-bottom: 1.25em;
-}
-
-@media (max-width: 720px) {
-  .product-card {
-    grid-template-columns: 1fr;
-  }
-}
-
-// ---- Product page hero ---------------------------------------------
-.product-hero {
-  background: $color-bg-alt;
-  border-bottom: 3px solid $color-primary;
-  padding: 2.5rem 0;
-}
-
-.product-hero-inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
+.product-plate-media {
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  gap: var(--s3);
 }
 
-.product-hero-media {
-  text-align: center;
-}
-
-.product-hero-img {
-  max-height: 400px;
+.product-plate-img {
+  max-height: 420px;
   width: auto;
   margin: 0 auto;
+  border: 0; // floating on field
+}
+
+// ---- Product text block (centered plate, then flush-left detail) ---
+.product-heading {
+  text-align: center;
+  padding-block: var(--s6) var(--s4);
 }
 
 .product-code {
-  font-family: $font-headings;
-  color: $color-accent;
-  letter-spacing: 0.08em;
-  margin-bottom: 0.5em;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-ink);
+  margin-bottom: var(--s2);
 }
 
 .product-title {
-  font-size: 2.6rem;
-  margin-bottom: 0.25em;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-display);
+  line-height: var(--leading-display);
+  color: var(--color-ink);
+  letter-spacing: -0.01em;
+  margin: 0 0 var(--s2);
+  border-bottom: 0; // plate title — no rule here
+  padding-bottom: 0;
 }
 
+// Subtitle: Archivo 600, non-italic, ink at 70% opacity (if needed)
 .product-subtitle {
-  font-family: $font-headings;
-  font-size: 1.25rem;
-  color: $color-charcoal;
-  font-style: italic;
-  margin-bottom: 1em;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--text-md);
+  font-style: normal; // kill the serif italic
+  color: var(--color-ink);
+  opacity: 0.7;
+  margin-bottom: var(--s3);
 }
 
-.product-status {
-  display: inline-block;
-  font-family: $font-headings;
-  padding: 0.3em 0.8em;
-  border: 2px solid currentColor;
-  font-size: 0.9rem;
-  letter-spacing: 0.05em;
+.product-status-row {
+  margin-top: var(--s3);
 }
 
-.product-status-available {
-  color: $color-accent-cool;
+// ---- Spec table (Courier-ruled, 1px rules, no fills) ---------------
+.spec-table,
+table.specs {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm); // 16px table cells
+  line-height: var(--leading-sm);
 }
 
-.product-status-coming-soon {
-  color: $color-accent;
+.spec-table th,
+.spec-table td,
+table.specs th,
+table.specs td {
+  border: 1px solid var(--color-rule); // 1px hairline rules, no fills
+  padding: var(--s2) var(--s3);
+  text-align: left;
+  vertical-align: top;
 }
 
-.product-status-concept {
-  color: $color-charcoal;
+.spec-table th,
+table.specs th {
+  font-weight: 700;
+  color: var(--color-ink);
+  background: transparent;
 }
 
-@media (max-width: 720px) {
-  .product-hero-inner {
-    grid-template-columns: 1fr;
-  }
+.spec-table td,
+table.specs td {
+  color: var(--color-text);
+  background: transparent;
 }
 
-// ---- Product features ---------------------------------------------
+// ---- Downloads table (Courier-ruled, same treatment) --------------
+.downloads-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+}
+
+.downloads-table th,
+.downloads-table td {
+  border: 1px solid var(--color-rule);
+  padding: var(--s2) var(--s3);
+  text-align: left;
+}
+
+.downloads-table th {
+  font-weight: 700;
+  color: var(--color-ink);
+  background: transparent;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: var(--text-xs);
+}
+
+.downloads-table td {
+  background: transparent;
+}
+
+// ---- Product features / links (flush-left asymmetric) --------------
 .product-features {
-  padding: 2.5rem 0;
+  padding-block: var(--s7);
 }
 
 .product-links {
-  padding: 2rem 0;
-  background: $color-bg-alt;
+  padding-block: var(--s7);
+  background: var(--color-paper-alt);
 }
 
 .product-link-list {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: var(--s3);
   padding: 0;
   margin: 0;
 }
 
-// ---- Feature list (used in product body content) -------------------
+// ---- Feature list --------------------------------------------------
 .feature-list {
   list-style: none;
   padding: 0;
@@ -269,24 +293,56 @@
 }
 
 .feature-list li {
-  padding: 0.75em 0;
-  border-bottom: 1px solid $color-rule;
+  padding: var(--s2) 0;
+  border-bottom: 1px solid var(--color-rule); // 1px hairline
   display: flex;
-  gap: 0.75em;
+  gap: var(--s2);
   align-items: baseline;
 }
 
 .feature-list li::before {
-  content: "\25C6"; // diamond
-  color: $color-accent;
+  content: "—"; // em dash, not diamond — restrained
+  color: var(--color-ink);
   flex-shrink: 0;
+  font-family: var(--font-mono);
 }
 
-// ---- Page (generic content) ---------------------------------------
+// ---- Link card (flat, 1px rule, no shadow) -------------------------
+.link-card {
+  display: block;
+  padding: var(--s3);
+  border: 1px solid var(--color-rule);
+  text-decoration: none;
+  color: var(--color-ink);
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.link-card:hover,
+.link-card:focus {
+  border-color: var(--color-ink);
+  color: var(--color-accent);
+}
+
+.link-card-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-md);
+  margin-bottom: var(--s1);
+}
+
+.link-card-meta {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-text);
+}
+
+// ---- Page (generic content) — asymmetric cols 3–10 ---------------
 .page-header {
-  background: $color-bg-alt;
-  border-bottom: 2px solid $color-primary;
-  padding: 2rem 0;
+  background: var(--color-paper-alt);
+  border-bottom: 1px solid var(--color-rule);
+  padding-block: var(--s6) var(--s5);
 }
 
 .page-title {
@@ -294,117 +350,134 @@
 }
 
 .page-content {
-  padding: 2.5rem 0;
+  padding-block: var(--s7);
 }
 
-// ---- Manual --------------------------------------------------------
+// ---- Manual — same asymmetric treatment ---------------------------
 .manual-header {
-  background: $color-bg-alt;
-  border-bottom: 2px solid $color-primary;
-  padding: 2rem 0;
+  background: var(--color-paper-alt);
+  border-bottom: 1px solid var(--color-rule);
+  padding-block: var(--s6) var(--s5);
 }
 
 .manual-eyebrow {
-  font-family: $font-headings;
-  color: $color-accent;
-  letter-spacing: 0.08em;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
   text-transform: uppercase;
-  font-size: 0.85rem;
-  margin-bottom: 0.5em;
+  letter-spacing: 0.12em;
+  color: var(--color-ink);
+  margin-bottom: var(--s2);
 }
 
 .manual-title {
-  margin-bottom: 0.25em;
+  margin-bottom: var(--s1);
 }
 
 .manual-revision {
-  font-family: $font-headings;
-  font-style: italic;
-  color: $color-charcoal;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  font-style: normal;
 }
 
 .manual-content {
-  padding: 2.5rem 0;
+  padding-block: var(--s7);
 }
 
 .manual-content section {
-  margin-bottom: 2.5rem;
+  margin-bottom: var(--s5);
 }
 
 .manual-content h2 {
-  border-bottom: 1px solid $color-rule;
-  padding-bottom: 0.25em;
-  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--color-rule); // hairline
+  padding-bottom: var(--s1);
+  margin-bottom: var(--s3);
 }
 
+// Manual footer band — cream, not ink (the site footer is the dark plane)
 .manual-footer {
-  background: $color-primary;
-  color: $color-text-inverse;
-  padding: 1.5rem 0;
+  background: var(--color-paper-alt);
+  color: var(--color-ink);
+  padding: var(--s5) 0;
   text-align: center;
-  font-size: 0.9rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border-top: 1px solid var(--color-rule);
 }
 
 .manual-footer a {
-  color: $color-accent-warm;
+  color: var(--color-ink);
 }
 
-// ---- Timeline (about page) ----------------------------------------
+.manual-footer a:hover,
+.manual-footer a:focus {
+  color: var(--color-accent);
+}
+
+// ---- Timeline (about page) — coral dots, ink ring -----------------
 .timeline {
   list-style: none;
   padding: 0;
-  margin: 2rem 0;
+  margin: var(--s5) 0;
   position: relative;
 }
 
 .timeline::before {
   content: "";
   position: absolute;
-  left: 8px;
+  left: 7px;
   top: 0;
   bottom: 0;
-  width: 2px;
-  background: $color-rule-strong;
+  width: 1px; // hairline rail
+  background: var(--color-rule);
 }
 
 .timeline-entry {
   position: relative;
-  padding: 0 0 1.5rem 2.5rem;
+  padding: 0 0 var(--s4) var(--s5);
 }
 
+// Dots: coral with ink ring, 14px
 .timeline-entry::before {
   content: "";
   position: absolute;
-  left: 2px;
+  left: 0;
   top: 0.4em;
   width: 14px;
   height: 14px;
-  background: $color-accent;
-  border: 2px solid $color-primary;
-  border-radius: 50%;
+  background: var(--color-accent);
+  border: 2px solid var(--color-ink);
+  border-radius: 50%; // dots are the ONE sanctioned circle
 }
 
 .timeline-year {
-  font-family: $font-headings;
+  font-family: var(--font-display);
   font-weight: 700;
-  color: $color-primary;
+  font-size: var(--text-md);
+  color: var(--color-ink);
   display: block;
-  margin-bottom: 0.25em;
+  margin-bottom: var(--s1);
 }
 
 .timeline-text {
-  color: $color-text;
+  color: var(--color-text);
 }
 
-// ---- Stamp / seal accent (warranty) -------------------------------
+// ---- Warranty stamp (rotated -6deg double-rule maroon) ------------
+// The one sanctioned playful element, and it's diegetic.
 .stamp {
   display: inline-block;
-  border: 3px double $color-stamp;
-  color: $color-stamp;
-  font-family: $font-headings;
+  border: 3px double var(--color-stamp);
+  color: var(--color-stamp);
+  font-family: var(--font-mono);
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  padding: 0.5em 1.2em;
+  letter-spacing: 0.12em;
+  font-size: var(--text-xs);
+  padding: var(--s2) var(--s3);
   transform: rotate(-6deg);
-  margin: 1rem 0;
+  margin: var(--s3) 0;
+  border-radius: 0;
 }

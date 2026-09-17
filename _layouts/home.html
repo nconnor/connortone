@@ -6,21 +6,28 @@ layout: default
 
   <section class="home-intro">
     <div class="container">
-      {{ content }}
+      <div class="grid-12">
+        <div class="col-content measure">
+          {{ content }}
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="home-featured" aria-label="Featured product">
     <div class="container">
-      <h2 class="section-title">The Chowdinator</h2>
-      <div class="product-card">
-        <div class="product-card-media">
-          <img src="{{ '/assets/images/chowdinator-render.png' | relative_url }}" alt="The CONNORTONE Chowdinator" class="product-card-img">
-        </div>
-        <div class="product-card-body">
-          <p class="product-card-code">CHDR(G) &middot; Porch Board Emulator</p>
-          <p class="product-card-desc">The flagship CONNORTONE instrument. Embossed percussion surface, copper-shielded pickup cavity, TONE/VOL controls, and a ¼&Prime; mono output.</p>
-          <a href="{{ '/chowdinator/' | relative_url }}" class="btn btn-primary">Explore the Chowdinator &rarr;</a>
+      <div class="grid-12">
+        <div class="col-content">
+          <h2 class="section-title">The Chowdinator</h2>
+          <div class="product-plate-media">
+            <img src="{{ '/assets/images/chowdinator-render.png' | relative_url }}" alt="The CONNORTONE Chowdinator" class="product-plate-img">
+            <p class="plate-caption">FIG. 1 — THE CHOWDINATOR &middot; PORCH BOARD EMULATOR &middot; PLATE I</p>
+          </div>
+          <p class="product-code">CHDR(G) &middot; Porch Board Emulator</p>
+          <p class="measure">The flagship CONNORTONE instrument. Embossed percussion surface, copper-shielded pickup cavity, TONE/VOL controls, and a &frac14;&Prime; mono output.</p>
+          <p>
+            <a href="{{ '/chowdinator/' | relative_url }}" class="btn btn-primary">Explore the Chowdinator &rarr;</a>
+          </p>
         </div>
       </div>
     </div>

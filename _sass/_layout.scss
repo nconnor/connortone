@@ -1,5 +1,6 @@
 // ============================================================
-//  Connortone — Layout (nav, footer, container, grid)
+//  CONNORTONE — Layout (container, nav, footer, grid, sections)
+//  8px baseline grid. Container 1080px, 12-col, 24px gap.
 // ============================================================
 
 @import "variables";
@@ -7,40 +8,50 @@
 // ---- Container ------------------------------------------------------
 .container {
   width: 100%;
-  max-width: $container-max;
+  max-width: var(--container-max);
   margin: 0 auto;
-  padding: 0 $gutter;
+  padding: 0 var(--s3); // 24px gutter
 }
 
 // ---- Site main ------------------------------------------------------
 .site-main {
   min-height: 60vh;
-  padding-bottom: 4rem;
 }
 
-// ---- Navigation -----------------------------------------------------
+// ---- Section rhythm (96px desktop / 64px mobile) -------------------
+.section {
+  padding-block: var(--s7); // 96px desktop
+}
+
+@media (max-width: 860px) {
+  .section {
+    padding-block: var(--s6); // 64px mobile
+  }
+}
+
+// ---- Navigation (cream band, 72px, 1px ink border-bottom) ----------
 .site-nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: $color-primary;
-  border-bottom: 3px solid $color-accent;
+  background: var(--color-paper-alt); // cream — NOT teal-filled
+  border-bottom: 1px solid var(--color-ink);
+  // reserve dark mass for the footer (solid-vs-void: one dark plane)
 }
 
 .nav-container {
-  max-width: $container-max;
+  max-width: var(--container-max);
   margin: 0 auto;
-  padding: 0 $gutter;
+  padding: 0 var(--s3);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: $nav-height;
+  min-height: var(--nav-height); // 72px
 }
 
 .nav-logo {
   display: inline-block;
-  background: $color-white;
-  padding: 4px 10px;
+  line-height: 0;
 }
 
 .nav-logo-img {
@@ -52,32 +63,34 @@
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: var(--s4); // 32px
   margin: 0;
   padding: 0;
 }
 
+// Nav links: Archivo 600, 13px, uppercase, tracked, ink
 .nav-link {
   display: inline-block;
-  padding: 0.25em 0;
-  color: $color-text-inverse;
+  padding: var(--s1) 0;
+  color: var(--color-ink);
   text-decoration: none;
-  font-family: $font-headings;
-  font-size: 1.05rem;
-  letter-spacing: 0.02em;
-  border-bottom: 2px solid transparent;
-  transition: border-color 0.15s ease, color 0.15s ease;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--text-xs); // 13px
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border-bottom: 2px solid transparent; // slot for coral active underline
+  transition: color var(--transition), border-color var(--transition);
 }
 
 .nav-link:hover,
 .nav-link:focus {
-  color: $color-accent-warm;
-  border-bottom-color: $color-accent-warm;
+  color: var(--color-accent);
 }
 
+// Active link: 2px coral underline (one accent moment)
 .nav-link.is-active {
-  color: $color-on-accent-warm;
-  border-bottom-color: $color-accent-warm;
+  border-bottom-color: var(--color-accent);
 }
 
 // Mobile toggle (hidden on desktop)
@@ -86,86 +99,122 @@
   background: transparent;
   border: 0;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: var(--s1);
 }
 
 .nav-toggle-bar {
   display: block;
   width: 26px;
-  height: 3px;
-  background: $color-text-inverse;
+  height: 2px;
+  background: var(--color-ink);
   margin: 4px 0;
 }
 
-// ---- Footer ---------------------------------------------------------
+// ---- Footer (solid ink band, cream text, 96px vertical) ------------
 .site-footer {
-  background: $color-primary;
-  color: $color-text-inverse;
-  border-top: 3px solid $color-accent;
-  padding: 2.5rem 0;
+  background: var(--color-ink); // solid ink — the one dark plane
+  color: var(--color-paper-alt); // cream text
+  padding: var(--s7) 0; // 96px
 }
 
 .footer-container {
-  max-width: $container-max;
+  max-width: var(--container-max);
   margin: 0 auto;
-  padding: 0 $gutter;
+  padding: 0 var(--s3);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 1.5rem;
+  align-items: flex-start;
+  gap: var(--s4);
 }
 
 .footer-brand {
   display: flex;
   flex-direction: column;
-  gap: 0.25em;
+  gap: var(--s2);
 }
 
+// Logo at 48px — white knockout via invert filter on current asset
 .footer-logo {
   height: 48px;
   width: auto;
-  background: $color-white;
-  padding: 4px 8px;
+  filter: brightness(0) invert(1); // knock out to white on ink band
   align-self: flex-start;
 }
 
 .footer-company {
-  font-family: $font-headings;
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-top: 0.5rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-md);
+  color: var(--color-paper);
+  letter-spacing: -0.01em;
 }
 
 .footer-location {
-  font-size: 0.95rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs); // 13px
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-paper-alt);
   opacity: 0.85;
 }
 
 .footer-meta {
   text-align: right;
-  font-size: 0.9rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs); // 13px Courier
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-paper-alt);
   opacity: 0.85;
 }
 
 .footer-meta p {
-  margin-bottom: 0.5em;
+  margin-bottom: var(--s1);
 }
 
-// ---- Grid (generic) -------------------------------------------------
+.footer-meta a {
+  color: var(--color-paper-alt);
+}
+
+.footer-meta a:hover,
+.footer-meta a:focus {
+  color: var(--color-accent);
+}
+
+// ---- 12-col grid ---------------------------------------------------
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--grid-gap); // 24px
+}
+
+// Asymmetric content column: spans cols 3–10 (Swiss offset, not centered)
+.col-content {
+  grid-column: 3 / 11;
+}
+
+@media (max-width: 860px) {
+  .col-content {
+    grid-column: 1 / -1; // full bleed on mobile
+  }
+}
+
+// Generic grids (legacy helpers)
 .grid {
   display: grid;
-  gap: $gutter;
+  gap: var(--s3);
 }
 
-.grid-2 {
-  grid-template-columns: repeat(2, 1fr);
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+
+// ---- Cream alternating band ----------------------------------------
+.band-cream {
+  background: var(--color-paper-alt);
 }
 
-.grid-3 {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-// ---- Responsive -----------------------------------------------------
+// ---- Responsive nav ------------------------------------------------
 @media (max-width: 860px) {
   .nav-toggle {
     display: block;
@@ -173,19 +222,19 @@
 
   .nav-menu {
     position: absolute;
-    top: $nav-height;
+    top: var(--nav-height);
     left: 0;
     right: 0;
     flex-direction: column;
     align-items: flex-start;
     gap: 0;
-    background: $color-primary;
-    padding: 0 $gutter 1rem;
-    border-bottom: 3px solid $color-accent;
+    background: var(--color-paper-alt);
+    padding: 0 var(--s3) var(--s4);
+    border-bottom: 1px solid var(--color-ink);
     display: none;
   }
 
-  // Simple no-JS fallback: reveal menu on toggle focus-within
+  // No-JS fallback: reveal on toggle / focus-within
   .nav-toggle[aria-expanded="true"] + .nav-menu,
   .nav-menu:focus-within {
     display: flex;
@@ -197,8 +246,8 @@
 
   .nav-link {
     display: block;
-    padding: 0.75em 0;
-    border-bottom: 1px solid rgba($color-white, 0.12);
+    padding: var(--s3) 0;
+    border-bottom: 1px solid var(--color-rule);
   }
 
   .grid-2,
