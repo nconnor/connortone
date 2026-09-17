@@ -50,49 +50,49 @@ nav_order: 3
     certain, directly related to our business.
   </p>
 
-  <div class="timeline-entries">
+  <ul class="timeline">
 
-    <div class="timeline-entry">
-      <h3 class="timeline-entry__date">29 Oct 1929</h3>
-      <p class="timeline-entry__event">
+    <li class="timeline-entry">
+      <h3 class="timeline-year">29 Oct 1929</h3>
+      <p class="timeline-text">
         <strong>CONNORTONE</strong> opens for business, optimistic that the 1930s will see an explosion in demand for leisure and
         luxury goods. It does not go well.
       </p>
-    </div>
+    </li>
 
-    <div class="timeline-entry">
-      <h3 class="timeline-entry__date">7 Dec 1941</h3>
-      <p class="timeline-entry__event">
+    <li class="timeline-entry">
+      <h3 class="timeline-year">7 Dec 1941</h3>
+      <p class="timeline-text">
         <strong>CONNORTONE</strong> announces its new line of Eastern-influenced instruments, and pioneers outsourcing by
         manufacturing product in Manchuria. It does not go well.
       </p>
-    </div>
+    </li>
 
-    <div class="timeline-entry">
-      <h3 class="timeline-entry__date">8 Aug 1945</h3>
-      <p class="timeline-entry__event">
+    <li class="timeline-entry">
+      <h3 class="timeline-year">8 Aug 1945</h3>
+      <p class="timeline-text">
         <strong>CONNORTONE</strong>'s new Schaumberg, Illinois facility opens, leveraging the latest in technology: elves and
         waterwheels. It goes as well as can be expected.
       </p>
-    </div>
+    </li>
 
-    <div class="timeline-entry">
-      <h3 class="timeline-entry__date">22 Nov 1963</h3>
-      <p class="timeline-entry__event">
+    <li class="timeline-entry">
+      <h3 class="timeline-year">22 Nov 1963</h3>
+      <p class="timeline-text">
         Water infiltration into the Schaumberg plant forces a temporary move to Dallas, Texas. Staff returns to
         Illinois on November 23, 1963. It goes well.
       </p>
-    </div>
+    </li>
 
-    <div class="timeline-entry">
-      <h3 class="timeline-entry__date">24 Jul 1969</h3>
-      <p class="timeline-entry__event">
+    <li class="timeline-entry">
+      <h3 class="timeline-year">24 Jul 1969</h3>
+      <p class="timeline-text">
         The company announces a new direction after failing to foresee the popularity of the electric guitar. The
         plant is demolished and replaced with a water park.
       </p>
-    </div>
+    </li>
 
-  </div>
+  </ul>
 </section>
 
 <section class="about-location">

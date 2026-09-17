@@ -10,90 +10,76 @@ product_subtitle: Porch Board Emulator
 product_image: /assets/images/chowdinator-render.png
 ---
 
-<section class="product-hero">
-  <img src="/assets/images/chowdinator-render.png" alt="The CONNORTONE CHDR(G) Chowdinator Porch Board Emulator" class="product-hero__image" />
-  <div class="product-hero__text">
-    <h1>The Chowdinator</h1>
-    <p class="product-hero__code">CHDR(G) &middot; Porch Board Emulator &middot; Revision 3.2</p>
-  </div>
-</section>
+<p>
+  <strong>CONNORTONE</strong> extends its congratulations on your acquisition of a fine instrument, now
+  equipped with HYPERCUSSION technology, new for 1962. Your <strong>CONNORTONE</strong> instrument is a
+  precision tool. It should give you many years of service, precisely emulating a rotten and loose front
+  porch floorboard.
+</p>
 
-<section class="product-intro">
-  <p>
-    <strong>CONNORTONE</strong> extends its congratulations on your acquisition of a fine instrument, now
-    equipped with HYPERCUSSION technology, new for 1962. Your <strong>CONNORTONE</strong> instrument is a
-    precision tool. It should give you many years of service, precisely emulating a rotten and loose front
-    porch floorboard.
-  </p>
-</section>
+<h2>Specifications</h2>
 
-<section class="product-features">
-  <h2>Features</h2>
-  <dl>
-    <dt>Embossed percussion surface</dt>
-    <dd>A 12" x 6" embossed surface, replaceable by means of four (4) brass screws and four (4) brass washers.
-    Fully ambidextrous. The discriminating musician may place either foot and commence to thumping.</dd>
+<table class="spec-table">
+  <thead>
+    <tr>
+      <th>Component</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Embossed percussion surface</td>
+      <td>A 12" x 6" embossed surface, replaceable by means of four (4) brass screws and four (4) brass washers. Fully ambidextrous. The discriminating musician may place either foot and commence to thumping.</td>
+    </tr>
+    <tr>
+      <td>Copper-shielded pickup cavity</td>
+      <td>The amplifier pickup cavity is lined with copper foil to eliminate electronic interference. We employ copper rather than aluminum, having determined that aluminum foil is not sufficient shielding against amplifiers, electric instruments, messages from the Devil, or the influence of Allen Dulles.</td>
+    </tr>
+    <tr>
+      <td>TONE and VOL controls</td>
+      <td>Your Chowdinator is equipped with both TONE and VOLUME control knobs, rear-mounted in accordance with <strong>CONNORTONE</strong> design philosophy. They may or may not do anything useful.</td>
+    </tr>
+    <tr>
+      <td>&frac14;" monophonic output</td>
+      <td>A standard &frac14;" monophonic output jack for connection to your amplifier or recording apparatus.</td>
+    </tr>
+    <tr>
+      <td>Hardware</td>
+      <td>Four (4) brass screws. Four (4) brass washers. Do not omit the brass washers during reinstallation.</td>
+    </tr>
+  </tbody>
+</table>
 
-    <dt>Copper-shielded pickup cavity</dt>
-    <dd>The amplifier pickup cavity is lined with copper foil to eliminate electronic interference. We employ
-    copper rather than aluminum, having determined that aluminum foil is not sufficient shielding against
-    amplifiers, electric instruments, messages from the Devil, or the influence of Allen Dulles.</dd>
+<h2>Hints on Playing Your Chowdinator</h2>
 
-    <dt>TONE and VOL controls</dt>
-    <dd>Your Chowdinator is equipped with both TONE and VOLUME control knobs, rear-mounted in accordance with
-    <strong>CONNORTONE</strong> design philosophy. They may or may not do anything useful.</dd>
+<p>
+  Your Chowdinator Porch Board Emulator, like every musical instrument, requires a modest degree of study
+  if the best results are to be obtained. A small application of effort will greatly increase the pleasure
+  to be derived from this charming instrument.
+</p>
 
-    <dt>&frac14;" monophonic output</dt>
-    <dd>A standard &frac14;" monophonic output jack for connection to your amplifier or recording apparatus.</dd>
+<p>
+  Place either foot on the 12" x 6" embossed percussion surface and commence to thumping. The CHDR(G) is
+  fully ambidextrous. The tone of the instrument improves with use.
+</p>
 
-    <dt>Hardware</dt>
-    <dd>Four (4) brass screws. Four (4) brass washers. Do not omit the brass washers during reinstallation.</dd>
-  </dl>
-</section>
+<h2>Parts of the Chowdinator</h2>
 
-<section class="product-hints">
-  <h2>Hints on Playing Your Chowdinator</h2>
-  <p>
-    Your Chowdinator Porch Board Emulator, like every musical instrument, requires a modest degree of study
-    if the best results are to be obtained. A small application of effort will greatly increase the pleasure
-    to be derived from this charming instrument.
-  </p>
-  <p>
-    Place either foot on the 12" x 6" embossed percussion surface and commence to thumping. The CHDR(G) is
-    fully ambidextrous. The tone of the instrument improves with use.
-  </p>
-</section>
+<img src="/assets/images/product-diagram.png" alt="Parts diagram of the Chowdinator" />
+<p class="plate-caption">Fig. 2 — Parts Diagram, CHDR(G)</p>
 
-<section class="product-parts">
-  <h2>Parts of the Chowdinator</h2>
-  <img src="/assets/images/product-diagram.png" alt="Parts diagram of the Chowdinator" class="product-parts__diagram" />
-  <ol>
-    <li>Embossed percussion surface</li>
-    <li>Premium badging</li>
-    <li>&frac14;" monophonic output jack</li>
-    <li>TONE control</li>
-    <li>VOL control</li>
-    <li>Premium TONE badging</li>
-    <li>Premium VOL badging</li>
-  </ol>
-  <p>
-    The embossed percussion surface may be replaced in the event of wear, or upon finding a better one at a
-    flea market or on eBay, by detaching the four (4) brass screws and substituting the new plate. Do not
-    omit the four (4) brass washers during reinstallation.
-  </p>
-</section>
+<ol>
+  <li>Embossed percussion surface</li>
+  <li>Premium badging</li>
+  <li>&frac14;" monophonic output jack</li>
+  <li>TONE control</li>
+  <li>VOL control</li>
+  <li>Premium TONE badging</li>
+  <li>Premium VOL badging</li>
+</ol>
 
-<section class="product-links">
-  <a href="/chowdinator/manual/" class="link-card">
-    <h3>Product Manual</h3>
-    <p>Full operating instructions, parts reference, and maintenance notes.</p>
-  </a>
-  <a href="/warranty/" class="link-card">
-    <h3>Warranty of Craftsmanship</h3>
-    <p>Five (5) Year Limited Warranty — terms, exclusions, and how to obtain service.</p>
-  </a>
-  <a href="/downloads/" class="link-card">
-    <h3>Technical Downloads</h3>
-    <p>Technical drawings and manufacturing specifications available in our archives.</p>
-  </a>
-</section>
+<p>
+  The embossed percussion surface may be replaced in the event of wear, or upon finding a better one at a
+  flea market or on eBay, by detaching the four (4) brass screws and substituting the new plate. Do not
+  omit the four (4) brass washers during reinstallation.
+</p>

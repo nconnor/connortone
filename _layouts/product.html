@@ -6,7 +6,7 @@ layout: default
     <div class="container">
       <div class="product-plate-media">
         <img src="{{ page.product_image | relative_url }}" alt="{{ page.product_name }}" class="product-plate-img">
-        <p class="plate-caption">{{ page.product_code }} &middot; {{ page.product_name }}</p>
+        <p class="plate-caption">Fig. 1 — {{ page.product_code }} {{ page.product_subtitle }}</p>
       </div>
       <div class="product-heading">
         <p class="product-code">{{ page.product_code }}</p>
@@ -32,8 +32,7 @@ layout: default
   <section class="product-features" aria-label="Product features">
     <div class="container">
       <div class="grid-12">
-        <div class="col-content measure">
-          <h2 class="section-title">Features</h2>
+        <div class="col-content column-prose measure">
           {{ content }}
         </div>
       </div>
@@ -43,10 +42,11 @@ layout: default
   <section class="product-links" aria-label="Product resources">
     <div class="container">
       <div class="grid-12">
-        <div class="col-content">
+        <div class="col-content column-prose">
           <ul class="product-link-list">
             <li><a href="{{ '/chowdinator/manual/' | relative_url }}" class="btn btn-outline">Read the manual &rarr;</a></li>
             <li><a href="{{ '/warranty/' | relative_url }}" class="btn btn-outline">Warranty of craftsmanship &rarr;</a></li>
+            <li><a href="{{ '/downloads/' | relative_url }}" class="btn btn-outline">Technical downloads &rarr;</a></li>
           </ul>
         </div>
       </div>
@@ -56,7 +56,7 @@ layout: default
   <section class="product-features" aria-label="Coming soon">
     <div class="container">
       <div class="grid-12">
-        <div class="col-content measure">
+        <div class="col-content column-prose measure">
           {{ content }}
         </div>
       </div>

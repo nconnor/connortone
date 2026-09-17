@@ -1,86 +1,168 @@
 // ============================================================
 //  CONNORTONE — Design tokens
-//  Restrained mid-century industrial (IBM/Braun/Rand)
-//  Source: connortone-plan/06-design/visual-design-spec.md
+//  1960s American industrial catalog (Sears/Braun/Rand)
+//  Source: connortone-plan/06-design/design-spec.md v1.0
 //
 //  All tokens are emitted as CSS custom properties on :root so
 //  they can be consumed directly in components without SCSS
 //  variable indirection. SCSS variables are kept only where
-//  partials still interpolate them (font stacks, container,
-//  nav height) — these mirror the custom properties.
+//  partials still interpolate them — these mirror the custom
+//  properties.
 // ============================================================
 
 :root {
-  // ---- Color ---------------------------------------------------------
-  --color-paper:      #FFFFFF; // page background
-  --color-paper-alt:  #F0F0E6; // cream — alternating bands, hero field
-  --color-ink:        #264653; // headings, nav text, footer fill, primary button fill
-  --color-text:       #2C2C2C; // body copy (charcoal, never pure black)
-  --color-accent:     #E76F51; // THE ONLY accent — coral
-  --color-stamp:      #800000; // maroon — warranty stamp ONLY
-  --color-rule:       rgba(38, 70, 83, 0.25); // hairline rules, teal-tinted
+  // ---- Colour palette (§5) — one job per colour -------------------
+  --color-black:       #000000;
+  --color-white:       #FFFFFF;
+  --color-cream:       #F0F0E6;  // alternating section ground
 
-  // ---- Type scale (major third 1.25) — no intermediate sizes ---------
-  --text-xs:      13px;    // 0.8125rem — eyebrows, captions, nav, footer meta
-  --text-sm:      16px;    // 1.0rem    — secondary UI, table cells
-  --text-base:    18px;    // 1.125rem  — body copy
-  --text-md:      22px;    // 1.375rem  — h4, lead-ins
-  --text-lg:      28px;    // 1.75rem   — h3
-  --text-xl:      35px;    // 2.1875rem — h2
-  --text-2xl:     44px;    // 2.75rem    — h1 / page titles
-  --text-display: clamp(44px, 6vw, 56px); // product titles, hero wordmark
+  --color-teal:        #264653;  // structure: nav, footer, headings, brand rules
+  --color-coral:       #E76F51;  // one action per view: CTA, active nav, kicker
+  --color-ochre:       #F4A261;  // hover/warmth secondary
+  --color-teal-green:  #2A9D8F;  // semantic "cool note" (in stock, verified)
+  --color-maroon:      #800000;  // warranty stamp device ONLY
+  --color-brass:       #C5A059;  // hardware-detail icons/rules on product pages
+  --color-charcoal:    #2C2C2C;  // engraved text / dark UI
 
-  --leading-xs:   1.5;
-  --leading-sm:   1.5;
-  --leading-base: 1.65;
-  --leading-md:   1.4;
-  --leading-lg:   1.25;
-  --leading-xl:   1.15;
-  --leading-2xl:  1.1;
-  --leading-display: 1.05;
+  // ---- Contrast pairs (§5) — codified, never violate --------------
+  --on-teal:        var(--color-white);   // 9.5:1 — white text on teal
+  --on-coral:       var(--color-black);   // 6.8:1 — black text on coral (NEVER white 3.1:1)
+  --on-ochre:       var(--color-black);   // 10:1  — black text on ochre
+  --on-maroon:      var(--color-white);   // 7.4:1 — white text on maroon
+  --on-cream:       var(--color-black);   // 19:1  — black text on cream
 
-  // ---- Spacing — 8px baseline grid ----------------------------------
-  --s1: 8px;
-  --s2: 16px;
-  --s3: 24px;
-  --s4: 32px;
-  --s5: 48px;
-  --s6: 64px;
-  --s7: 96px;
-  --s8: 128px;
+  // ---- Semantic mappings -------------------------------------------
+  --color-text:        var(--color-black);
+  --color-bg:          var(--color-white);
+  --color-bg-alt:      var(--color-cream);
+  --color-primary:     var(--color-teal);     // structure
+  --color-accent:      var(--color-coral);     // one action
+  --color-accent-warm: var(--color-ochre);     // hover
+  --color-accent-cool: var(--color-teal-green); // semantic
+  --color-stamp:       var(--color-maroon);
+  --color-hardware:    var(--color-brass);
 
-  // ---- Layout --------------------------------------------------------
-  --container-max: 1080px;
-  --grid-columns: 12;
-  --grid-gap: var(--s3); // 24px
-  --nav-height: 72px;
+  --color-rule:        rgba(0, 0, 0, 0.18);   // hairline rules (§4: $rule-w-hair)
+  --color-rule-brand:  var(--color-teal);      // brand rules (§4: $rule-w)
 
-  // ---- Type families (system fallbacks) -----------------------------
-  --font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
-  --font-body:    "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+  // ---- Type families (§2, §7) --------------------------------------
+  // Display: Jost (Futura lineage, Bauhaus geometric) via Bunny Fonts
+  // Body: system serif stack — Hoefler Text, Charter, Georgia
+  // Utility: Courier New (system mono) — specs, serials, data tables
+  --font-display: "Jost", "Futura", "Century Gothic", sans-serif;
+  --font-body:    "Hoefler Text", "Charter", "Georgia", serif;
   --font-mono:    "Courier New", "Courier", monospace;
+  --font-headings: var(--font-display);  // replaces serif headings
 
-  // ---- Motion --------------------------------------------------------
-  --transition: 150ms ease;
+  // ---- Type scale (§2) — ratio 1.25 (major third), base 18px -------
+  --fs-display: 3.4rem;       // 54px — hero H1, Jost 600, UPPERCASE
+  --fs-h2:      2.75rem;      // 44px — page titles, Jost 500
+  --fs-h3:      2.2rem;       // 35px — section heads, Jost 500
+  --fs-h4:      1.75rem;      // 28px — subsections, Jost 500
+  --fs-body-lg: 1.4rem;       // 22px — lead/intro paragraph
+  --fs-body:    1.125rem;     // 18px — default body serif
+  --fs-label:   0.8125rem;    // 13px — ALL CAPS Jost 500: nav, captions, buttons, kickers
+  --fs-mono:    0.9375rem;    // 15px — spec tables, Courier
+
+  // Line-heights per §2 table
+  --lh-display: 1.05;
+  --lh-h2:      1.1;
+  --lh-h3:      1.15;
+  --lh-h4:      1.2;
+  --lh-body-lg: 1.5;
+  --lh-body:    1.6;
+  --lh-label:   1.3;
+  --lh-mono:    1.5;
+
+  // Letterspacing
+  --ls-display: 0.01em;    // +0.01em for display H1
+  --ls-label:   0.12em;    // +0.12em for ALL CAPS labels
+
+  // ---- Spacing (§3) — 8px baseline, tokens $sp-1…$sp-8 ------------
+  --sp-1: 4px;     // inline icon gaps
+  --sp-2: 8px;     // tight element padding
+  --sp-3: 16px;    // component internal padding
+  --sp-4: 24px;    // gutter (all containers), card padding
+  --sp-5: 32px;    // between related blocks (h2 → body)
+  --sp-6: 48px;    // between subsections
+  --sp-7: 64px;    // between major sections (mobile)
+  --sp-8: 96px;    // between major sections (desktop); product-plate clear margin
+
+  // ---- Layout (§4) -------------------------------------------------
+  --container-max: 1100px;
+  --grid-columns: 12;
+  --grid-gap: var(--sp-4);    // 24px gutter
+  --nav-height: 72px;
+  --measure-prose: 720px;     // prose column (§3)
+  --measure-ch: 68ch;         // body max measure (§3)
+
+  // ---- Rules / structure (§4) --------------------------------------
+  --rule-w: 3px;              // brand rule (teal or coral)
+  --rule-w-hair: 1px;         // table/list hairline
+
+  // ---- Motion (§4) -------------------------------------------------
+  --transition: 150ms ease;   // ≤150ms ease on color/border only
+
+  // ---- Flatness (§4) -----------------------------------------------
+  --radius: 0;                // zero radius everywhere
 }
 
 // ---- SCSS mirrors (for partials that still interpolate) -------------
-$font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
-$font-body:    "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
-$font-mono:    "Courier New", "Courier", monospace;
+$font-display:  "Jost", "Futura", "Century Gothic", sans-serif;
+$font-body:     "Hoefler Text", "Charter", "Georgia", serif;
+$font-mono:     "Courier New", "Courier", monospace;
+$font-headings: $font-display;
 
-$color-paper:     #FFFFFF;
-$color-paper-alt: #F0F0E6;
-$color-ink:       #264653;
-$color-text:      #2C2C2C;
-$color-accent:    #E76F51;
-$color-stamp:     #800000;
-$color-rule:      rgba(38, 70, 83, 0.25);
+// Type scale (rem-based per §7)
+$fs-display: 3.4rem;  $fs-h2: 2.75rem;  $fs-h3: 2.2rem;  $fs-h4: 1.75rem;
+$fs-body-lg: 1.4rem;  $fs-body: 1.125rem;  $fs-label: 0.8125rem;  $fs-mono: 0.9375rem;
 
-$container-max: 1080px;
-$grid-gap: 24px;
-$nav-height: 72px;
-$radius: 0;
+$lh-display: 1.05;  $lh-body: 1.6;
+$ls-label: 0.12em;
 
-// Retired — DO NOT USE. Removed per visual-design-spec §3.
-// $color-ochre, $color-teal-green, $color-brass are gone.
+// Colour palette
+$color-black:       #000000;
+$color-white:       #FFFFFF;
+$color-cream:       #F0F0E6;
+$color-teal:        #264653;
+$color-coral:       #E76F51;
+$color-ochre:       #F4A261;
+$color-teal-green:  #2A9D8F;
+$color-maroon:      #800000;
+$color-brass:       #C5A059;
+$color-charcoal:    #2C2C2C;
+
+// Semantic mappings
+$color-text:        $color-black;
+$color-bg:          $color-white;
+$color-bg-alt:      $color-cream;
+$color-primary:     $color-teal;
+$color-accent:      $color-coral;
+$color-accent-warm: $color-ochre;
+$color-accent-cool: $color-teal-green;
+$color-stamp:       $color-maroon;
+$color-hardware:    $color-brass;
+
+// Contrast pairs (§5)
+$color-on-primary:     $color-white;   // on teal
+$color-on-accent:      $color-black;   // on coral — NEVER white
+$color-on-accent-warm: $color-black;   // on ochre
+$color-on-stamp:       $color-white;   // on maroon
+
+// Rules
+$color-rule:        rgba(0, 0, 0, 0.18);
+$color-rule-strong: rgba(0, 0, 0, 0.4);
+$rule-w:            3px;
+$rule-w-hair:       1px;
+
+// Spacing (§3)
+$sp-1: 4px;  $sp-2: 8px;  $sp-3: 16px;  $sp-4: 24px;
+$sp-5: 32px; $sp-6: 48px; $sp-7: 64px;  $sp-8: 96px;
+
+// Layout
+$container-max:  1100px;
+$gutter:         24px;
+$measure-prose:  720px;
+$measure-ch:     68ch;
+$nav-height:     72px;
+$radius:         0;

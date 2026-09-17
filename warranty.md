@@ -9,6 +9,8 @@ nav_order: 4
 <section class="warranty-summary">
   <h2><strong>CONNORTONE</strong> Five (5) Year Limited Warranty</h2>
 
+  <p class="stamp">Warranted &middot; 5 Year</p>
+
   <p>
     <strong>CONNORTONE</strong> warrants this product to be free from defects in workmanship and materials,
     under normal residential use and conditions, for a period of five (5) years from the original purchase

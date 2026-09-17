@@ -1,6 +1,7 @@
 // ============================================================
 //  CONNORTONE — Layout (container, nav, footer, grid, sections)
-//  8px baseline grid. Container 1080px, 12-col, 24px gap.
+//  8px baseline grid. Container 1100px, 12-col, 24px gap.
+//  Source: design-spec.md v1.0 §4 (Grid & layout), §5 (Colour)
 // ============================================================
 
 @import "variables";
@@ -10,7 +11,7 @@
   width: 100%;
   max-width: var(--container-max);
   margin: 0 auto;
-  padding: 0 var(--s3); // 24px gutter
+  padding: 0 var(--sp-4); // 24px gutter (§3: $gutter)
 }
 
 // ---- Site main ------------------------------------------------------
@@ -18,31 +19,30 @@
   min-height: 60vh;
 }
 
-// ---- Section rhythm (96px desktop / 64px mobile) -------------------
+// ---- Section rhythm (96px desktop / 64px mobile) — §3 --------------
 .section {
-  padding-block: var(--s7); // 96px desktop
+  padding-block: var(--sp-8); // 96px desktop
 }
 
 @media (max-width: 860px) {
   .section {
-    padding-block: var(--s6); // 64px mobile
+    padding-block: var(--sp-7); // 64px mobile
   }
 }
 
-// ---- Navigation (cream band, 72px, 1px ink border-bottom) ----------
+// ---- Navigation (§5: teal bg, white text, 3px coral border) --------
 .site-nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--color-paper-alt); // cream — NOT teal-filled
-  border-bottom: 1px solid var(--color-ink);
-  // reserve dark mass for the footer (solid-vs-void: one dark plane)
+  background: var(--color-primary); // teal — structure (§5)
+  border-bottom: var(--rule-w) solid var(--color-accent); // 3px coral brand rule
 }
 
 .nav-container {
   max-width: var(--container-max);
   margin: 0 auto;
-  padding: 0 var(--s3);
+  padding: 0 var(--sp-4);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -59,38 +59,46 @@
   width: auto;
 }
 
+// TODO(§8 asset request 2): Replace .logo-knockout filter with white knockout SVG
+// when @user provides the asset. This utility class dies at that point.
+.logo-knockout {
+  filter: brightness(0) invert(1); // knock out black logo to white for teal bg
+}
+
 .nav-menu {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: var(--s4); // 32px
+  gap: var(--sp-5); // 32px
   margin: 0;
   padding: 0;
 }
 
-// Nav links: Archivo 600, 13px, uppercase, tracked, ink
+// Nav links (§2 Label: Jost 500, 13px, ALL CAPS, +0.12em)
+// §5: white text on teal (9.5:1)
 .nav-link {
   display: inline-block;
-  padding: var(--s1) 0;
-  color: var(--color-ink);
+  padding: var(--sp-2) 0;
+  color: var(--on-teal); // white on teal
   text-decoration: none;
   font-family: var(--font-display);
-  font-weight: 600;
-  font-size: var(--text-xs); // 13px
+  font-weight: 500;
+  font-size: var(--fs-label); // 13px
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: var(--ls-label); // 0.12em
   border-bottom: 2px solid transparent; // slot for coral active underline
   transition: color var(--transition), border-color var(--transition);
 }
 
+// §5: ochre = hover/warmth secondary (NOT coral — coral is reserved for one action)
 .nav-link:hover,
 .nav-link:focus {
-  color: var(--color-accent);
+  color: var(--color-accent-warm); // ochre
 }
 
-// Active link: 2px coral underline (one accent moment)
+// Active link: 2px coral underline (§5: coral = active nav underline)
 .nav-link.is-active {
-  border-bottom-color: var(--color-accent);
+  border-bottom-color: var(--color-accent); // coral
 }
 
 // Mobile toggle (hidden on desktop)
@@ -99,82 +107,81 @@
   background: transparent;
   border: 0;
   cursor: pointer;
-  padding: var(--s1);
+  padding: var(--sp-2);
 }
 
 .nav-toggle-bar {
   display: block;
   width: 26px;
   height: 2px;
-  background: var(--color-ink);
+  background: var(--on-teal); // white on teal
   margin: 4px 0;
 }
 
-// ---- Footer (solid ink band, cream text, 96px vertical) ------------
+// ---- Footer (§5: solid teal, white/cream text, 96px vertical) ------
 .site-footer {
-  background: var(--color-ink); // solid ink — the one dark plane
-  color: var(--color-paper-alt); // cream text
-  padding: var(--s7) 0; // 96px
+  background: var(--color-primary); // teal — structure
+  color: var(--color-cream);
+  padding: var(--sp-8) 0; // 96px
 }
 
 .footer-container {
   max-width: var(--container-max);
   margin: 0 auto;
-  padding: 0 var(--s3);
+  padding: 0 var(--sp-4);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
-  gap: var(--s4);
+  gap: var(--sp-5);
 }
 
 .footer-brand {
   display: flex;
   flex-direction: column;
-  gap: var(--s2);
+  gap: var(--sp-3);
 }
 
-// Logo at 48px — white knockout via invert filter on current asset
+// Logo at 48px — white knockout via .logo-knockout utility (see TODO above)
 .footer-logo {
   height: 48px;
   width: auto;
-  filter: brightness(0) invert(1); // knock out to white on ink band
   align-self: flex-start;
 }
 
 .footer-company {
   font-family: var(--font-display);
-  font-weight: 700;
-  font-size: var(--text-md);
-  color: var(--color-paper);
-  letter-spacing: -0.01em;
+  font-weight: 600;
+  font-size: var(--fs-body-lg); // 22px
+  color: var(--color-white);
+  letter-spacing: var(--ls-display);
 }
 
 .footer-location {
   font-family: var(--font-mono);
-  font-size: var(--text-xs); // 13px
+  font-size: var(--fs-mono); // 15px Courier
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--color-paper-alt);
+  letter-spacing: var(--ls-label);
+  color: var(--color-cream);
   opacity: 0.85;
 }
 
 .footer-meta {
   text-align: right;
   font-family: var(--font-mono);
-  font-size: var(--text-xs); // 13px Courier
+  font-size: var(--fs-mono); // 15px Courier
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--color-paper-alt);
+  letter-spacing: var(--ls-label);
+  color: var(--color-cream);
   opacity: 0.85;
 }
 
 .footer-meta p {
-  margin-bottom: var(--s1);
+  margin-bottom: var(--sp-2);
 }
 
 .footer-meta a {
-  color: var(--color-paper-alt);
+  color: var(--color-cream);
 }
 
 .footer-meta a:hover,
@@ -182,14 +189,14 @@
   color: var(--color-accent);
 }
 
-// ---- 12-col grid ---------------------------------------------------
+// ---- 12-col grid (§4) ----------------------------------------------
 .grid-12 {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: var(--grid-gap); // 24px
 }
 
-// Asymmetric content column: spans cols 3–10 (Swiss offset, not centered)
+// Asymmetric content column: spans cols 3–10 (Swiss offset)
 .col-content {
   grid-column: 3 / 11;
 }
@@ -203,18 +210,18 @@
 // Generic grids (legacy helpers)
 .grid {
   display: grid;
-  gap: var(--s3);
+  gap: var(--sp-4);
 }
 
 .grid-2 { grid-template-columns: repeat(2, 1fr); }
 .grid-3 { grid-template-columns: repeat(3, 1fr); }
 
-// ---- Cream alternating band ----------------------------------------
+// ---- Cream alternating band (§5) ------------------------------------
 .band-cream {
-  background: var(--color-paper-alt);
+  background: var(--color-bg-alt);
 }
 
-// ---- Responsive nav ------------------------------------------------
+// ---- Responsive nav (§5: teal mobile menu) -------------------------
 @media (max-width: 860px) {
   .nav-toggle {
     display: block;
@@ -228,9 +235,9 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 0;
-    background: var(--color-paper-alt);
-    padding: 0 var(--s3) var(--s4);
-    border-bottom: 1px solid var(--color-ink);
+    background: var(--color-primary); // teal — matches nav
+    padding: 0 var(--sp-4) var(--sp-5);
+    border-bottom: var(--rule-w) solid var(--color-accent); // 3px coral
     display: none;
   }
 
@@ -246,8 +253,8 @@
 
   .nav-link {
     display: block;
-    padding: var(--s3) 0;
-    border-bottom: 1px solid var(--color-rule);
+    padding: var(--sp-4) 0;
+    border-bottom: var(--rule-w-hair) solid rgba(255, 255, 255, 0.12);
   }
 
   .grid-2,
