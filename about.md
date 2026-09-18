@@ -102,8 +102,8 @@ nav_order: 3
 
 <section class="about-memorabilia band-cream">
   <div class="plate-figure">
-    <img src="/assets/images/chowhound-plate.png" alt="CONNORTONE company memorabilia — The Chowhound, Mississippi plate" class="plate-img" />
-    <p class="plate-caption">FIG. 2 &mdash; COMPANY MEMORABILIA &middot; &ldquo;THE CHOWHOUND&rdquo; &middot; MISSISSIPPI PLATE, OCT 76</p>
+    <img src="/assets/images/chowdinator-plate.png" alt="CONNORTONE company memorabilia — The Chowdinator, Mississippi plate" class="plate-img" />
+    <p class="plate-caption">FIG. 2 &mdash; COMPANY MEMORABILIA &middot; &ldquo;THE CHOWDINATOR&rdquo; &middot; MISSISSIPPI PLATE, OCT 76</p>
   </div>
 </section>
 

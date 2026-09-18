@@ -15,7 +15,7 @@
         <a href="{{ '/' | relative_url }}" class="nav-link {% if page.url == '/' %}is-active{% endif %}">Home</a>
       </li>
       <li class="nav-item nav-item-products">
-        <a href="{{ '/chowdinator/' | relative_url }}" class="nav-link {% if page.url contains '/chowdinator/' or page.collection == 'products' %}is-active{% endif %}">Products</a>
+        <a href="{{ '/chowdinator/' | relative_url }}" class="nav-link {% if page.url == '/chowdinator/' or page.collection == 'products' %}is-active{% endif %}">Products</a>
         <!-- For initial single-product launch, link directly to the Chowdinator.
              When a second product ships, convert this to a dropdown and iterate
              the site.products collection here. -->

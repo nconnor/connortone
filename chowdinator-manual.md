@@ -81,9 +81,6 @@ revision: "3.2"
 </section>
 
 <section class="manual-back">
-  <p class="manual-back__note">
-    This is the back cover. Reverse grip on manual to continue.
-  </p>
   <p class="manual-back__copyright">
     &copy; Copyright 1987 <strong>CONNORTONE</strong> Inc., Schaumberg Illinois
   </p>
